@@ -1,0 +1,514 @@
+{
+  "tests": [
+    {
+      "name": "1. echo empty",
+      "setup": "",
+      "run": "cabal -v0 run echo",
+      "input": "",
+      "output": "\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "2. echo single word",
+      "setup": "",
+      "run": "cabal -v0 run echo haskell",
+      "input": "",
+      "output": "haskell\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "3. echo multiple words",
+      "setup": "",
+      "run": "cabal -v0 run echo haskell 4 lyfe",
+      "input": "",
+      "output": "haskell 4 lyfe\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "4. echo advanced",
+      "setup": "",
+      "run": "cabal -v0 run echo haskell     is  soo  l33t",
+      "input": "",
+      "output": "haskell is soo l33t\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "5. cat file",
+      "setup": "",
+      "run": "cabal -v0 run cat test/haiku.txt",
+      "input": "",
+      "output": "Haskell's cryptic form\nis natural to some folks\nand so is haiku\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "6. cat missing file",
+      "setup": "",
+      "run": "cabal -v0 run cat nope.txt",
+      "input": "",
+      "output": "cat: nope.txt: No such file or directory\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "7. cat big file",
+      "setup": "",
+      "run": "cabal -v0 run cat test/lorem.txt",
+      "input": "",
+      "output": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, iste dolor\ntenetur cumque rerum nesciunt laudantium dolores enim id exercitationem\nmolestias velit tempore ab amet recusandae repudiandae quam eius quisquam sunt\ndoloribus vel qui est? Repellendus expedita unde enim nostrum ut inventore? Quia\niste deleniti facere, doloribus tenetur veritatis voluptatem ea similique fuga\nfugiat temporibus aut ad ullam enim perferendis esse, ab cumque pariatur\narchitecto beatae. Tempora, incidunt recusandae repudiandae deleniti ratione\nreiciendis voluptatibus dolorum maxime vitae, cupiditate rerum temporibus at\ndoloribus quasi nam debitis molestiae veritatis! Soluta iusto odit laboriosam\nanimi dicta alias, blanditiis optio dolorum quas repellat, perferendis, earum\nipsa. Tempora, qui sit ex sed distinctio eligendi ratione, id fugiat asperiores\nneque voluptates nesciunt aut nobis in! Sed architecto ipsam debitis libero\ntempora eum corrupti, magnam fugiat reiciendis, rem placeat dolorem, minus\nipsum? Maiores consectetur aspernatur qui dolorum. Voluptate incidunt odit iusto\nbeatae temporibus accusamus laboriosam dolor quidem, doloremque aspernatur\nharum. Ad voluptate nemo in tempore. Sed expedita culpa aliquam eveniet autem\nerror, alias aperiam sunt natus libero, quibusdam vitae deserunt nostrum quia\neum, vel tempore cumque facilis ipsum aspernatur dolore! Nesciunt maiores,\nrepudiandae quos assumenda aliquam voluptatum labore nemo porro deserunt\nadipisci illum! Deserunt, itaque ducimus odio aliquam dolore corrupti eveniet\nvoluptatem quis magni sit at hic neque? Reprehenderit praesentium repellat\nexpedita eveniet perspiciatis eaque reiciendis illo suscipit dolorum animi fugit\nerror, non ratione iusto sed. Doloribus corporis reprehenderit nam at provident\nmaiores illum. Veniam excepturi vero inventore eaque quo porro neque esse\ntenetur beatae fuga itaque magni iste pariatur atque delectus, maxime quos nulla\npossimus consequuntur facere quam ratione! Harum quo ducimus obcaecati quaerat\niusto dicta minima consequuntur vero! Veniam nemo amet id ipsam laborum aliquam\nillo facere nihil animi aliquid, ex doloribus expedita tempore harum. Dolores\ndignissimos, accusamus, rerum recusandae vel consequuntur voluptatem earum,\nofficia aliquid ullam alias laboriosam? Quo assumenda accusamus dolore libero\nquam, architecto cupiditate consectetur illo rem at similique voluptatum\nexcepturi praesentium dolor in, voluptas perferendis nisi! Excepturi nisi\naperiam praesentium animi perspiciatis ducimus quam consequuntur iusto\ndoloremque, numquam ullam ab quisquam temporibus deserunt ut repudiandae\nreiciendis soluta laborum qui eos omnis placeat beatae molestiae! Quos eius\nprovident itaque beatae soluta amet nihil corporis sapiente? Consectetur totam\niusto nisi, maxime, minus odit asperiores vitae cum dolor veritatis officia\nquibusdam! Similique, quo. Rem molestiae qui corrupti quam, unde, laudantium\nharum nulla doloremque commodi ducimus eius, alias recusandae dolore aliquam\nipsa. Ipsum aspernatur temporibus facilis ex, quam nemo delectus, eveniet\nquaerat labore praesentium suscipit doloremque atque modi alias laborum, quo\nblanditiis. Vero inventore ea in minus nulla officia officiis accusantium nam\nalias repellendus, voluptatum quisquam nisi accusamus reiciendis. Distinctio\nquia, obcaecati reprehenderit, nulla minus, voluptatem temporibus nemo sapiente\nrerum doloribus ea dolorem fugit expedita vel eveniet ipsa explicabo? Quis iusto\nfugit sint a veritatis amet voluptas quod quaerat aspernatur culpa quam\nperspiciatis et dolorum doloribus maxime, minima at excepturi corrupti veniam\nbeatae quibusdam totam? Eius obcaecati suscipit error ea? Soluta quas delectus\nab sunt corporis sit, reiciendis quidem nesciunt aliquam, nihil nam, asperiores\ndoloribus hic a blanditiis? Nihil repellendus, quasi incidunt unde amet,\npossimus placeat rem quaerat quia quidem fugit laborum. Consequatur impedit cum,\nquaerat autem aspernatur culpa, nobis alias voluptates, nam animi magni placeat\ndignissimos! Iusto, laborum. Quae recusandae dolor, blanditiis reprehenderit\ndolorum, necessitatibus facilis qui soluta cumque delectus repudiandae dicta!\nDolores, eaque. Laborum odit adipisci cumque illo quasi dicta illum? Rerum\nmaiores in laboriosam numquam quaerat necessitatibus corrupti facere laborum\nneque quas ipsa quos, soluta vel repellat eius libero, illo nulla quisquam sunt,\net autem tempora. Mollitia qui temporibus rem aperiam neque autem fugiat dolorem\niste excepturi? Tenetur corporis dicta dolores molestias, quasi labore cumque,\nquidem perferendis animi illum nisi temporibus iusto maiores distinctio\nvoluptatibus nemo consequatur quisquam aut nihil quia voluptate omnis minima\nculpa consectetur. Saepe atque libero nisi ipsum odit ipsa maxime nihil dolorum\nquaerat suscipit doloremque labore, quisquam vitae eveniet obcaecati soluta\nsapiente aspernatur ex minima corrupti, alias quidem! Aut ratione aperiam fuga\naccusantium neque, perspiciatis quas est, animi eaque eius totam non, numquam\nnihil! Aperiam suscipit sequi aspernatur ducimus, iure dolorum libero quae atque\nnihil quidem, quos iste deleniti, dolore eum! Aliquid sit, praesentium\naspernatur itaque consequatur, sint error nobis at necessitatibus distinctio\nnisi amet quibusdam mollitia exercitationem quo voluptate, eveniet ullam libero\neligendi perspiciatis dolorem. Minus officia pariatur at architecto quod\nofficiis molestias alias dicta dolore distinctio illo omnis eligendi nisi\ninventore minima sapiente, nobis quam, accusantium, dolorum perspiciatis rem\nitaque perferendis. Laudantium perspiciatis laboriosam sit commodi temporibus\nculpa eaque consequatur a assumenda vel dicta aspernatur recusandae doloremque\nquia necessitatibus veritatis quos voluptates sapiente, quas distinctio totam.\nAmet tempora debitis consectetur perferendis hic recusandae laborum quibusdam,\nmagni deleniti similique enim, quis ab nesciunt obcaecati, facere eaque.\nExercitationem nulla reiciendis atque animi sed in adipisci dolorum facere quam\net. Maiores earum dolor natus illum cumque quas eos praesentium alias possimus\nab numquam magnam provident eum, ipsa beatae quia unde similique dolorum esse\ncorrupti tenetur omnis voluptate facere cupiditate. Optio blanditiis quidem\ntotam laborum maxime, error mollitia. Nesciunt pariatur odio dolorum tenetur\nalias molestias eaque. Deleniti laudantium accusamus blanditiis, tenetur quaerat\nipsum? Nihil, reprehenderit exercitationem dolore adipisci impedit ipsum\nlaudantium ea iusto odio ipsa excepturi recusandae! Blanditiis facere ipsum fuga\ndistinctio suscipit sunt veritatis corrupti quasi hic non aperiam minima\nvoluptate commodi dicta porro perferendis fugiat, officia illo id animi\naspernatur sint odit consequuntur cupiditate! Aperiam magni similique numquam\nvel, hic quam nemo dolorum odio consequuntur iure a repellendus nesciunt, quae\nnatus at id aut? Facilis reiciendis beatae exercitationem fuga libero ea\nprovident, sint officiis, commodi est magnam cum dolor laudantium sed fugit\nnobis recusandae praesentium optio consectetur ducimus ut tenetur voluptatum!\nQuibusdam dolores modi reiciendis omnis accusamus maxime aliquid maiores, velit\neius impedit provident sunt inventore tempore, cum cumque eos itaque. Accusamus\nreprehenderit fugiat veritatis est rem fugit unde enim nesciunt vel consequuntur\nquisquam incidunt quaerat quidem exercitationem molestiae earum, doloribus alias\nvoluptatem a ullam! Quisquam quasi, incidunt veniam saepe ratione ipsum in\nconsectetur fugit repellendus aliquam dolores aut officia aperiam reiciendis\ndicta ea esse odio. Earum, placeat?\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "8. cat two files",
+      "setup": "",
+      "run": "cabal -v0 run cat test/haiku.txt test/lorem.txt",
+      "input": "",
+      "output": "Haskell's cryptic form\nis natural to some folks\nand so is haiku\nLorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, iste dolor\ntenetur cumque rerum nesciunt laudantium dolores enim id exercitationem\nmolestias velit tempore ab amet recusandae repudiandae quam eius quisquam sunt\ndoloribus vel qui est? Repellendus expedita unde enim nostrum ut inventore? Quia\niste deleniti facere, doloribus tenetur veritatis voluptatem ea similique fuga\nfugiat temporibus aut ad ullam enim perferendis esse, ab cumque pariatur\narchitecto beatae. Tempora, incidunt recusandae repudiandae deleniti ratione\nreiciendis voluptatibus dolorum maxime vitae, cupiditate rerum temporibus at\ndoloribus quasi nam debitis molestiae veritatis! Soluta iusto odit laboriosam\nanimi dicta alias, blanditiis optio dolorum quas repellat, perferendis, earum\nipsa. Tempora, qui sit ex sed distinctio eligendi ratione, id fugiat asperiores\nneque voluptates nesciunt aut nobis in! Sed architecto ipsam debitis libero\ntempora eum corrupti, magnam fugiat reiciendis, rem placeat dolorem, minus\nipsum? Maiores consectetur aspernatur qui dolorum. Voluptate incidunt odit iusto\nbeatae temporibus accusamus laboriosam dolor quidem, doloremque aspernatur\nharum. Ad voluptate nemo in tempore. Sed expedita culpa aliquam eveniet autem\nerror, alias aperiam sunt natus libero, quibusdam vitae deserunt nostrum quia\neum, vel tempore cumque facilis ipsum aspernatur dolore! Nesciunt maiores,\nrepudiandae quos assumenda aliquam voluptatum labore nemo porro deserunt\nadipisci illum! Deserunt, itaque ducimus odio aliquam dolore corrupti eveniet\nvoluptatem quis magni sit at hic neque? Reprehenderit praesentium repellat\nexpedita eveniet perspiciatis eaque reiciendis illo suscipit dolorum animi fugit\nerror, non ratione iusto sed. Doloribus corporis reprehenderit nam at provident\nmaiores illum. Veniam excepturi vero inventore eaque quo porro neque esse\ntenetur beatae fuga itaque magni iste pariatur atque delectus, maxime quos nulla\npossimus consequuntur facere quam ratione! Harum quo ducimus obcaecati quaerat\niusto dicta minima consequuntur vero! Veniam nemo amet id ipsam laborum aliquam\nillo facere nihil animi aliquid, ex doloribus expedita tempore harum. Dolores\ndignissimos, accusamus, rerum recusandae vel consequuntur voluptatem earum,\nofficia aliquid ullam alias laboriosam? Quo assumenda accusamus dolore libero\nquam, architecto cupiditate consectetur illo rem at similique voluptatum\nexcepturi praesentium dolor in, voluptas perferendis nisi! Excepturi nisi\naperiam praesentium animi perspiciatis ducimus quam consequuntur iusto\ndoloremque, numquam ullam ab quisquam temporibus deserunt ut repudiandae\nreiciendis soluta laborum qui eos omnis placeat beatae molestiae! Quos eius\nprovident itaque beatae soluta amet nihil corporis sapiente? Consectetur totam\niusto nisi, maxime, minus odit asperiores vitae cum dolor veritatis officia\nquibusdam! Similique, quo. Rem molestiae qui corrupti quam, unde, laudantium\nharum nulla doloremque commodi ducimus eius, alias recusandae dolore aliquam\nipsa. Ipsum aspernatur temporibus facilis ex, quam nemo delectus, eveniet\nquaerat labore praesentium suscipit doloremque atque modi alias laborum, quo\nblanditiis. Vero inventore ea in minus nulla officia officiis accusantium nam\nalias repellendus, voluptatum quisquam nisi accusamus reiciendis. Distinctio\nquia, obcaecati reprehenderit, nulla minus, voluptatem temporibus nemo sapiente\nrerum doloribus ea dolorem fugit expedita vel eveniet ipsa explicabo? Quis iusto\nfugit sint a veritatis amet voluptas quod quaerat aspernatur culpa quam\nperspiciatis et dolorum doloribus maxime, minima at excepturi corrupti veniam\nbeatae quibusdam totam? Eius obcaecati suscipit error ea? Soluta quas delectus\nab sunt corporis sit, reiciendis quidem nesciunt aliquam, nihil nam, asperiores\ndoloribus hic a blanditiis? Nihil repellendus, quasi incidunt unde amet,\npossimus placeat rem quaerat quia quidem fugit laborum. Consequatur impedit cum,\nquaerat autem aspernatur culpa, nobis alias voluptates, nam animi magni placeat\ndignissimos! Iusto, laborum. Quae recusandae dolor, blanditiis reprehenderit\ndolorum, necessitatibus facilis qui soluta cumque delectus repudiandae dicta!\nDolores, eaque. Laborum odit adipisci cumque illo quasi dicta illum? Rerum\nmaiores in laboriosam numquam quaerat necessitatibus corrupti facere laborum\nneque quas ipsa quos, soluta vel repellat eius libero, illo nulla quisquam sunt,\net autem tempora. Mollitia qui temporibus rem aperiam neque autem fugiat dolorem\niste excepturi? Tenetur corporis dicta dolores molestias, quasi labore cumque,\nquidem perferendis animi illum nisi temporibus iusto maiores distinctio\nvoluptatibus nemo consequatur quisquam aut nihil quia voluptate omnis minima\nculpa consectetur. Saepe atque libero nisi ipsum odit ipsa maxime nihil dolorum\nquaerat suscipit doloremque labore, quisquam vitae eveniet obcaecati soluta\nsapiente aspernatur ex minima corrupti, alias quidem! Aut ratione aperiam fuga\naccusantium neque, perspiciatis quas est, animi eaque eius totam non, numquam\nnihil! Aperiam suscipit sequi aspernatur ducimus, iure dolorum libero quae atque\nnihil quidem, quos iste deleniti, dolore eum! Aliquid sit, praesentium\naspernatur itaque consequatur, sint error nobis at necessitatibus distinctio\nnisi amet quibusdam mollitia exercitationem quo voluptate, eveniet ullam libero\neligendi perspiciatis dolorem. Minus officia pariatur at architecto quod\nofficiis molestias alias dicta dolore distinctio illo omnis eligendi nisi\ninventore minima sapiente, nobis quam, accusantium, dolorum perspiciatis rem\nitaque perferendis. Laudantium perspiciatis laboriosam sit commodi temporibus\nculpa eaque consequatur a assumenda vel dicta aspernatur recusandae doloremque\nquia necessitatibus veritatis quos voluptates sapiente, quas distinctio totam.\nAmet tempora debitis consectetur perferendis hic recusandae laborum quibusdam,\nmagni deleniti similique enim, quis ab nesciunt obcaecati, facere eaque.\nExercitationem nulla reiciendis atque animi sed in adipisci dolorum facere quam\net. Maiores earum dolor natus illum cumque quas eos praesentium alias possimus\nab numquam magnam provident eum, ipsa beatae quia unde similique dolorum esse\ncorrupti tenetur omnis voluptate facere cupiditate. Optio blanditiis quidem\ntotam laborum maxime, error mollitia. Nesciunt pariatur odio dolorum tenetur\nalias molestias eaque. Deleniti laudantium accusamus blanditiis, tenetur quaerat\nipsum? Nihil, reprehenderit exercitationem dolore adipisci impedit ipsum\nlaudantium ea iusto odio ipsa excepturi recusandae! Blanditiis facere ipsum fuga\ndistinctio suscipit sunt veritatis corrupti quasi hic non aperiam minima\nvoluptate commodi dicta porro perferendis fugiat, officia illo id animi\naspernatur sint odit consequuntur cupiditate! Aperiam magni similique numquam\nvel, hic quam nemo dolorum odio consequuntur iure a repellendus nesciunt, quae\nnatus at id aut? Facilis reiciendis beatae exercitationem fuga libero ea\nprovident, sint officiis, commodi est magnam cum dolor laudantium sed fugit\nnobis recusandae praesentium optio consectetur ducimus ut tenetur voluptatum!\nQuibusdam dolores modi reiciendis omnis accusamus maxime aliquid maiores, velit\neius impedit provident sunt inventore tempore, cum cumque eos itaque. Accusamus\nreprehenderit fugiat veritatis est rem fugit unde enim nesciunt vel consequuntur\nquisquam incidunt quaerat quidem exercitationem molestiae earum, doloribus alias\nvoluptatem a ullam! Quisquam quasi, incidunt veniam saepe ratione ipsum in\nconsectetur fugit repellendus aliquam dolores aut officia aperiam reiciendis\ndicta ea esse odio. Earum, placeat?\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "9. cat two files, first missing",
+      "setup": "",
+      "run": "cabal -v0 run cat test/loremm.txt test/haiku.txt",
+      "input": "",
+      "output": "cat: test/loremm.txt: No such file or directory\nHaskell's cryptic form\nis natural to some folks\nand so is haiku\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "10. cat two files, second missing",
+      "setup": "",
+      "run": "cabal -v0 run cat test/haiku.txt test/loremm.txt",
+      "input": "",
+      "output": "Haskell's cryptic form\nis natural to some folks\nand so is haiku\ncat: test/loremm.txt: No such file or directory\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "11. rev file",
+      "setup": "",
+      "run": "cabal -v0 run rev test/haiku.txt",
+      "input": "",
+      "output": "mrof citpyrc s'lleksaH\nsklof emos ot larutan si\nukiah si os dna\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "12. rev missing file",
+      "setup": "",
+      "run": "cabal -v0 run rev nope.txt",
+      "input": "",
+      "output": "rev: nope.txt: No such file or directory\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "13. rev big file",
+      "setup": "",
+      "run": "cabal -v0 run rev test/lorem.txt",
+      "input": "",
+      "output": "rolod etsi ,tnureseD .tile gnicisipida rutetcesnoc tema tis rolod muspi meroL\nmenoitaticrexe di mine serolod muitnadual tnuicsen murer euqmuc rutenet\ntnus mauqsiuq suie mauq eadnaiduper eadnasucer tema ba eropmet tilev saitselom\naiuQ ?erotnevni tu murtson mine ednu atidepxe sudnellepeR ?tse iuq lev subirolod\naguf euqilimis ae metatpulov sitatirev rutenet subirolod ,erecaf itineled etsi\nrutairap euqmuc ba ,esse sidnerefrep mine mallu da tua subiropmet taiguf\nenoitar itineled eadnaiduper eadnasucer tnudicni ,aropmeT .eataeb otcetihcra\nta subiropmet murer etatidipuc ,eativ emixam murolod subitatpulov sidneicier\nmasoirobal tido otsui atuloS !sitatirev eaitselom sitibed man isauq subirolod\nmurae ,sidnerefrep ,talleper sauq murolod oitpo siitidnalb ,saila atcid imina\nseroirepsa taiguf di ,enoitar idnegile oitcnitsid des xe tis iuq ,aropmeT .aspi\norebil sitibed maspi otcetihcra deS !ni sibon tua tnuicsen setatpulov euqen\nsunim ,merolod taecalp mer ,sidneicier taiguf mangam ,itpurroc mue aropmet\notsui tido tnudicni etatpuloV .murolod iuq rutanrepsa rutetcesnoc seroiaM ?muspi\nrutanrepsa euqmerolod ,mediuq rolod masoirobal sumasucca subiropmet eataeb\nmetua teineve mauqila apluc atidepxe deS .eropmet ni omen etatpulov dA .murah\naiuq murtson tnuresed eativ madsubiuq ,orebil sutan tnus mairepa saila ,rorre\n,seroiam tnuicseN !erolod rutanrepsa muspi silicaf euqmuc eropmet lev ,mue\ntnuresed orrop omen erobal mutatpulov mauqila adnemussa souq eadnaiduper\nteineve itpurroc erolod mauqila oido sumicud euqati ,tnureseD !mulli icsipida\ntalleper muitnesearp tiredneherpeR ?euqen cih ta tis ingam siuq metatpulov\ntiguf imina murolod tipicsus olli sidneicier euqae sitaicipsrep teineve atidepxe\ntnedivorp ta man tiredneherper siroproc subiroloD .des otsui enoitar non ,rorre\nesse euqen orrop ouq euqae erotnevni orev irutpecxe maineV .mulli seroiam\nallun souq emixam ,sutceled euqta rutairap etsi ingam euqati aguf eataeb rutenet\ntareauq itaceacbo sumicud ouq muraH !enoitar mauq erecaf rutnuuqesnoc sumissop\nmauqila murobal maspi di tema omen maineV !orev rutnuuqesnoc aminim atcid otsui\nseroloD .murah eropmet atidepxe subirolod xe ,diuqila imina lihin erecaf olli\n,murae metatpulov rutnuuqesnoc lev eadnasucer murer ,sumasucca ,somissingid\norebil erolod sumasucca adnemussa ouQ ?masoirobal saila mallu diuqila aiciffo\nmutatpulov euqilimis ta mer olli rutetcesnoc etatidipuc otcetihcra ,mauq\nisin irutpecxE !isin sidnerefrep satpulov ,ni rolod muitnesearp irutpecxe\notsui rutnuuqesnoc mauq sumicud sitaicipsrep imina muitnesearp mairepa\neadnaiduper tu tnuresed subiropmet mauqsiuq ba mallu mauqmun ,euqmerolod\nsuie souQ !eaitselom eataeb taecalp sinmo soe iuq murobal atulos sidneicier\nmatot rutetcesnoC ?etneipas siroproc lihin tema atulos eataeb euqati tnedivorp\naiciffo sitatirev rolod muc eativ seroirepsa tido sunim ,emixam ,isin otsui\nmuitnadual ,ednu ,mauq itpurroc iuq eaitselom meR .ouq ,euqilimiS !madsubiuq\nmauqila erolod eadnasucer saila ,suie sumicud idommoc euqmerolod allun murah\nteineve ,sutceled omen mauq ,xe silicaf subiropmet rutanrepsa muspI .aspi\nouq ,murobal saila idom euqta euqmerolod tipicsus muitnesearp erobal tareauq\nman muitnasucca siiciffo aiciffo allun sunim ni ae erotnevni oreV .siitidnalb\noitcnitsiD .sidneicier sumasucca isin mauqsiuq mutatpulov ,sudnelleper saila\netneipas omen subiropmet metatpulov ,sunim allun ,tiredneherper itaceacbo ,aiuq\notsui siuQ ?obacilpxe aspi teineve lev atidepxe tiguf merolod ae subirolod murer\nmauq apluc rutanrepsa tareauq douq satpulov tema sitatirev a tnis tiguf\nmainev itpurroc irutpecxe ta aminim ,emixam subirolod murolod te sitaicipsrep\nsutceled sauq atuloS ?ae rorre tipicsus itaceacbo suiE ?matot madsubiuq eataeb\nseroirepsa ,man lihin ,mauqila tnuicsen mediuq sidneicier ,tis siroproc tnus ba\n,tema ednu tnudicni isauq ,sudnelleper lihiN ?siitidnalb a cih subirolod\n,muc tidepmi rutauqesnoC .murobal tiguf mediuq aiuq tareauq mer taecalp sumissop\ntaecalp ingam imina man ,setatpulov saila sibon ,apluc rutanrepsa metua tareauq\ntiredneherper siitidnalb ,rolod eadnasucer eauQ .murobal ,otsuI !somissingid\n!atcid eadnaiduper sutceled euqmuc atulos iuq silicaf subitatissecen ,murolod\nmureR ?mulli atcid isauq olli euqmuc icsipida tido murobaL .euqae ,seroloD\nmurobal erecaf itpurroc subitatissecen tareauq mauqmun masoirobal ni seroiam\n,tnus mauqsiuq allun olli ,orebil suie talleper lev atulos ,souq aspi sauq euqen\nmerolod taiguf metua euqen mairepa mer subiropmet iuq aitilloM .aropmet metua te\n,euqmuc erobal isauq ,saitselom serolod atcid siroproc ruteneT ?irutpecxe etsi\noitcnitsid seroiam otsui subiropmet isin mulli imina sidnerefrep mediuq\naminim sinmo etatpulov aiuq lihin tua mauqsiuq rutauqesnoc omen subitatpulov\nmurolod lihin emixam aspi tido muspi isin orebil euqta epeaS .rutetcesnoc apluc\natulos itaceacbo teineve eativ mauqsiuq ,erobal euqmerolod tipicsus tareauq\naguf mairepa enoitar tuA !mediuq saila ,itpurroc aminim xe rutanrepsa etneipas\nmauqmun ,non matot suie euqae imina ,tse sauq sitaicipsrep ,euqen muitnasucca\neuqta eauq orebil murolod erui ,sumicud rutanrepsa iuqes tipicsus mairepA !lihin\nmuitnesearp ,tis diuqilA !mue erolod ,itineled etsi souq ,mediuq lihin\noitcnitsid subitatissecen ta sibon rorre tnis ,rutauqesnoc euqati rutanrepsa\norebil mallu teineve ,etatpulov ouq menoitaticrexe aitillom madsubiuq tema isin\ndouq otcetihcra ta rutairap aiciffo suniM .merolod sitaicipsrep idnegile\nisin idnegile sinmo olli oitcnitsid erolod atcid saila saitselom siiciffo\nmer sitaicipsrep murolod ,muitnasucca ,mauq sibon ,etneipas aminim erotnevni\nsubiropmet idommoc tis masoirobal sitaicipsrep muitnaduaL .sidnerefrep euqati\neuqmerolod eadnasucer rutanrepsa atcid lev adnemussa a rutauqesnoc euqae apluc\n.matot oitcnitsid sauq ,etneipas setatpulov souq sitatirev subitatissecen aiuq\n,madsubiuq murobal eadnasucer cih sidnerefrep rutetcesnoc sitibed aropmet temA\n.euqae erecaf ,itaceacbo tnuicsen ba siuq ,mine euqilimis itineled ingam\nmauq erecaf murolod icsipida ni des imina euqta sidneicier allun menoitaticrexE\nsumissop saila muitnesearp soe sauq euqmuc mulli sutan rolod murae seroiaM .te\nesse murolod euqilimis ednu aiuq eataeb aspi ,mue tnedivorp mangam mauqmun ba\nmediuq siitidnalb oitpO .etatidipuc erecaf etatpulov sinmo rutenet itpurroc\nrutenet murolod oido rutairap tnuicseN .aitillom rorre ,emixam murobal matot\ntareauq rutenet ,siitidnalb sumasucca muitnadual itineleD .euqae saitselom saila\nmuspi tidepmi icsipida erolod menoitaticrexe tiredneherper ,lihiN ?muspi\naguf muspi erecaf siitidnalB !eadnasucer irutpecxe aspi oido otsui ae muitnadual\naminim mairepa non cih isauq itpurroc sitatirev tnus tipicsus oitcnitsid\nimina di olli aiciffo ,taiguf sidnerefrep orrop atcid idommoc etatpulov\nmauqmun euqilimis ingam mairepA !etatidipuc rutnuuqesnoc tido tnis rutanrepsa\neauq ,tnuicsen sudnelleper a erui rutnuuqesnoc oido murolod omen mauq cih ,lev\nae orebil aguf menoitaticrexe eataeb sidneicier silicaF ?tua di ta sutan\ntiguf des muitnadual rolod muc mangam tse idommoc ,siiciffo tnis ,tnedivorp\n!mutatpulov rutenet tu sumicud rutetcesnoc oitpo muitnesearp eadnasucer sibon\ntilev ,seroiam diuqila emixam sumasucca sinmo sidneicier idom serolod madsubiuQ\nsumasuccA .euqati soe euqmuc muc ,eropmet erotnevni tnus tnedivorp tidepmi suie\nrutnuuqesnoc lev tnuicsen mine ednu tiguf mer tse sitatirev taiguf tiredneherper\nsaila subirolod ,murae eaitselom menoitaticrexe mediuq tareauq tnudicni mauqsiuq\nni muspi enoitar epeas mainev tnudicni ,isauq mauqsiuQ !mallu a metatpulov\nsidneicier mairepa aiciffo tua serolod mauqila sudnelleper tiguf rutetcesnoc\n?taecalp ,muraE .oido esse ae atcid\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "14. rev two files",
+      "setup": "",
+      "run": "cabal -v0 run rev test/haiku.txt test/lorem.txt",
+      "input": "",
+      "output": "mrof citpyrc s'lleksaH\nsklof emos ot larutan si\nukiah si os dna\nrolod etsi ,tnureseD .tile gnicisipida rutetcesnoc tema tis rolod muspi meroL\nmenoitaticrexe di mine serolod muitnadual tnuicsen murer euqmuc rutenet\ntnus mauqsiuq suie mauq eadnaiduper eadnasucer tema ba eropmet tilev saitselom\naiuQ ?erotnevni tu murtson mine ednu atidepxe sudnellepeR ?tse iuq lev subirolod\naguf euqilimis ae metatpulov sitatirev rutenet subirolod ,erecaf itineled etsi\nrutairap euqmuc ba ,esse sidnerefrep mine mallu da tua subiropmet taiguf\nenoitar itineled eadnaiduper eadnasucer tnudicni ,aropmeT .eataeb otcetihcra\nta subiropmet murer etatidipuc ,eativ emixam murolod subitatpulov sidneicier\nmasoirobal tido otsui atuloS !sitatirev eaitselom sitibed man isauq subirolod\nmurae ,sidnerefrep ,talleper sauq murolod oitpo siitidnalb ,saila atcid imina\nseroirepsa taiguf di ,enoitar idnegile oitcnitsid des xe tis iuq ,aropmeT .aspi\norebil sitibed maspi otcetihcra deS !ni sibon tua tnuicsen setatpulov euqen\nsunim ,merolod taecalp mer ,sidneicier taiguf mangam ,itpurroc mue aropmet\notsui tido tnudicni etatpuloV .murolod iuq rutanrepsa rutetcesnoc seroiaM ?muspi\nrutanrepsa euqmerolod ,mediuq rolod masoirobal sumasucca subiropmet eataeb\nmetua teineve mauqila apluc atidepxe deS .eropmet ni omen etatpulov dA .murah\naiuq murtson tnuresed eativ madsubiuq ,orebil sutan tnus mairepa saila ,rorre\n,seroiam tnuicseN !erolod rutanrepsa muspi silicaf euqmuc eropmet lev ,mue\ntnuresed orrop omen erobal mutatpulov mauqila adnemussa souq eadnaiduper\nteineve itpurroc erolod mauqila oido sumicud euqati ,tnureseD !mulli icsipida\ntalleper muitnesearp tiredneherpeR ?euqen cih ta tis ingam siuq metatpulov\ntiguf imina murolod tipicsus olli sidneicier euqae sitaicipsrep teineve atidepxe\ntnedivorp ta man tiredneherper siroproc subiroloD .des otsui enoitar non ,rorre\nesse euqen orrop ouq euqae erotnevni orev irutpecxe maineV .mulli seroiam\nallun souq emixam ,sutceled euqta rutairap etsi ingam euqati aguf eataeb rutenet\ntareauq itaceacbo sumicud ouq muraH !enoitar mauq erecaf rutnuuqesnoc sumissop\nmauqila murobal maspi di tema omen maineV !orev rutnuuqesnoc aminim atcid otsui\nseroloD .murah eropmet atidepxe subirolod xe ,diuqila imina lihin erecaf olli\n,murae metatpulov rutnuuqesnoc lev eadnasucer murer ,sumasucca ,somissingid\norebil erolod sumasucca adnemussa ouQ ?masoirobal saila mallu diuqila aiciffo\nmutatpulov euqilimis ta mer olli rutetcesnoc etatidipuc otcetihcra ,mauq\nisin irutpecxE !isin sidnerefrep satpulov ,ni rolod muitnesearp irutpecxe\notsui rutnuuqesnoc mauq sumicud sitaicipsrep imina muitnesearp mairepa\neadnaiduper tu tnuresed subiropmet mauqsiuq ba mallu mauqmun ,euqmerolod\nsuie souQ !eaitselom eataeb taecalp sinmo soe iuq murobal atulos sidneicier\nmatot rutetcesnoC ?etneipas siroproc lihin tema atulos eataeb euqati tnedivorp\naiciffo sitatirev rolod muc eativ seroirepsa tido sunim ,emixam ,isin otsui\nmuitnadual ,ednu ,mauq itpurroc iuq eaitselom meR .ouq ,euqilimiS !madsubiuq\nmauqila erolod eadnasucer saila ,suie sumicud idommoc euqmerolod allun murah\nteineve ,sutceled omen mauq ,xe silicaf subiropmet rutanrepsa muspI .aspi\nouq ,murobal saila idom euqta euqmerolod tipicsus muitnesearp erobal tareauq\nman muitnasucca siiciffo aiciffo allun sunim ni ae erotnevni oreV .siitidnalb\noitcnitsiD .sidneicier sumasucca isin mauqsiuq mutatpulov ,sudnelleper saila\netneipas omen subiropmet metatpulov ,sunim allun ,tiredneherper itaceacbo ,aiuq\notsui siuQ ?obacilpxe aspi teineve lev atidepxe tiguf merolod ae subirolod murer\nmauq apluc rutanrepsa tareauq douq satpulov tema sitatirev a tnis tiguf\nmainev itpurroc irutpecxe ta aminim ,emixam subirolod murolod te sitaicipsrep\nsutceled sauq atuloS ?ae rorre tipicsus itaceacbo suiE ?matot madsubiuq eataeb\nseroirepsa ,man lihin ,mauqila tnuicsen mediuq sidneicier ,tis siroproc tnus ba\n,tema ednu tnudicni isauq ,sudnelleper lihiN ?siitidnalb a cih subirolod\n,muc tidepmi rutauqesnoC .murobal tiguf mediuq aiuq tareauq mer taecalp sumissop\ntaecalp ingam imina man ,setatpulov saila sibon ,apluc rutanrepsa metua tareauq\ntiredneherper siitidnalb ,rolod eadnasucer eauQ .murobal ,otsuI !somissingid\n!atcid eadnaiduper sutceled euqmuc atulos iuq silicaf subitatissecen ,murolod\nmureR ?mulli atcid isauq olli euqmuc icsipida tido murobaL .euqae ,seroloD\nmurobal erecaf itpurroc subitatissecen tareauq mauqmun masoirobal ni seroiam\n,tnus mauqsiuq allun olli ,orebil suie talleper lev atulos ,souq aspi sauq euqen\nmerolod taiguf metua euqen mairepa mer subiropmet iuq aitilloM .aropmet metua te\n,euqmuc erobal isauq ,saitselom serolod atcid siroproc ruteneT ?irutpecxe etsi\noitcnitsid seroiam otsui subiropmet isin mulli imina sidnerefrep mediuq\naminim sinmo etatpulov aiuq lihin tua mauqsiuq rutauqesnoc omen subitatpulov\nmurolod lihin emixam aspi tido muspi isin orebil euqta epeaS .rutetcesnoc apluc\natulos itaceacbo teineve eativ mauqsiuq ,erobal euqmerolod tipicsus tareauq\naguf mairepa enoitar tuA !mediuq saila ,itpurroc aminim xe rutanrepsa etneipas\nmauqmun ,non matot suie euqae imina ,tse sauq sitaicipsrep ,euqen muitnasucca\neuqta eauq orebil murolod erui ,sumicud rutanrepsa iuqes tipicsus mairepA !lihin\nmuitnesearp ,tis diuqilA !mue erolod ,itineled etsi souq ,mediuq lihin\noitcnitsid subitatissecen ta sibon rorre tnis ,rutauqesnoc euqati rutanrepsa\norebil mallu teineve ,etatpulov ouq menoitaticrexe aitillom madsubiuq tema isin\ndouq otcetihcra ta rutairap aiciffo suniM .merolod sitaicipsrep idnegile\nisin idnegile sinmo olli oitcnitsid erolod atcid saila saitselom siiciffo\nmer sitaicipsrep murolod ,muitnasucca ,mauq sibon ,etneipas aminim erotnevni\nsubiropmet idommoc tis masoirobal sitaicipsrep muitnaduaL .sidnerefrep euqati\neuqmerolod eadnasucer rutanrepsa atcid lev adnemussa a rutauqesnoc euqae apluc\n.matot oitcnitsid sauq ,etneipas setatpulov souq sitatirev subitatissecen aiuq\n,madsubiuq murobal eadnasucer cih sidnerefrep rutetcesnoc sitibed aropmet temA\n.euqae erecaf ,itaceacbo tnuicsen ba siuq ,mine euqilimis itineled ingam\nmauq erecaf murolod icsipida ni des imina euqta sidneicier allun menoitaticrexE\nsumissop saila muitnesearp soe sauq euqmuc mulli sutan rolod murae seroiaM .te\nesse murolod euqilimis ednu aiuq eataeb aspi ,mue tnedivorp mangam mauqmun ba\nmediuq siitidnalb oitpO .etatidipuc erecaf etatpulov sinmo rutenet itpurroc\nrutenet murolod oido rutairap tnuicseN .aitillom rorre ,emixam murobal matot\ntareauq rutenet ,siitidnalb sumasucca muitnadual itineleD .euqae saitselom saila\nmuspi tidepmi icsipida erolod menoitaticrexe tiredneherper ,lihiN ?muspi\naguf muspi erecaf siitidnalB !eadnasucer irutpecxe aspi oido otsui ae muitnadual\naminim mairepa non cih isauq itpurroc sitatirev tnus tipicsus oitcnitsid\nimina di olli aiciffo ,taiguf sidnerefrep orrop atcid idommoc etatpulov\nmauqmun euqilimis ingam mairepA !etatidipuc rutnuuqesnoc tido tnis rutanrepsa\neauq ,tnuicsen sudnelleper a erui rutnuuqesnoc oido murolod omen mauq cih ,lev\nae orebil aguf menoitaticrexe eataeb sidneicier silicaF ?tua di ta sutan\ntiguf des muitnadual rolod muc mangam tse idommoc ,siiciffo tnis ,tnedivorp\n!mutatpulov rutenet tu sumicud rutetcesnoc oitpo muitnesearp eadnasucer sibon\ntilev ,seroiam diuqila emixam sumasucca sinmo sidneicier idom serolod madsubiuQ\nsumasuccA .euqati soe euqmuc muc ,eropmet erotnevni tnus tnedivorp tidepmi suie\nrutnuuqesnoc lev tnuicsen mine ednu tiguf mer tse sitatirev taiguf tiredneherper\nsaila subirolod ,murae eaitselom menoitaticrexe mediuq tareauq tnudicni mauqsiuq\nni muspi enoitar epeas mainev tnudicni ,isauq mauqsiuQ !mallu a metatpulov\nsidneicier mairepa aiciffo tua serolod mauqila sudnelleper tiguf rutetcesnoc\n?taecalp ,muraE .oido esse ae atcid\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "15. rev two files, first missing",
+      "setup": "",
+      "run": "cabal -v0 run rev test/loremm.txt test/haiku.txt",
+      "input": "",
+      "output": "rev: test/loremm.txt: No such file or directory\nmrof citpyrc s'lleksaH\nsklof emos ot larutan si\nukiah si os dna\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "16. rev two files, second missing",
+      "setup": "",
+      "run": "cabal -v0 run rev test/haiku.txt test/loremm.txt",
+      "input": "",
+      "output": "mrof citpyrc s'lleksaH\nsklof emos ot larutan si\nukiah si os dna\nrev: test/loremm.txt: No such file or directory\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "17. head single small file",
+      "setup": "",
+      "run": "cabal -v0 run head test/haiku.txt",
+      "input": "",
+      "output": "Haskell's cryptic form\nis natural to some folks\nand so is haiku\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "18. head single big file",
+      "setup": "",
+      "run": "cabal -v0 run head test/lorem.txt",
+      "input": "",
+      "output": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, iste dolor\ntenetur cumque rerum nesciunt laudantium dolores enim id exercitationem\nmolestias velit tempore ab amet recusandae repudiandae quam eius quisquam sunt\ndoloribus vel qui est? Repellendus expedita unde enim nostrum ut inventore? Quia\niste deleniti facere, doloribus tenetur veritatis voluptatem ea similique fuga\nfugiat temporibus aut ad ullam enim perferendis esse, ab cumque pariatur\narchitecto beatae. Tempora, incidunt recusandae repudiandae deleniti ratione\nreiciendis voluptatibus dolorum maxime vitae, cupiditate rerum temporibus at\ndoloribus quasi nam debitis molestiae veritatis! Soluta iusto odit laboriosam\nanimi dicta alias, blanditiis optio dolorum quas repellat, perferendis, earum\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "19. head missing file",
+      "setup": "",
+      "run": "cabal -v0 run head test/haikuu.txt",
+      "input": "",
+      "output": "head: test/haikuu.txt: No such file or directory\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "20. head two files",
+      "setup": "",
+      "run": "cabal -v0 run head test/haiku.txt test/lorem.txt",
+      "input": "",
+      "output": "==> test/haiku.txt <==\nHaskell's cryptic form\nis natural to some folks\nand so is haiku\n\n==> test/lorem.txt <==\nLorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, iste dolor\ntenetur cumque rerum nesciunt laudantium dolores enim id exercitationem\nmolestias velit tempore ab amet recusandae repudiandae quam eius quisquam sunt\ndoloribus vel qui est? Repellendus expedita unde enim nostrum ut inventore? Quia\niste deleniti facere, doloribus tenetur veritatis voluptatem ea similique fuga\nfugiat temporibus aut ad ullam enim perferendis esse, ab cumque pariatur\narchitecto beatae. Tempora, incidunt recusandae repudiandae deleniti ratione\nreiciendis voluptatibus dolorum maxime vitae, cupiditate rerum temporibus at\ndoloribus quasi nam debitis molestiae veritatis! Soluta iusto odit laboriosam\nanimi dicta alias, blanditiis optio dolorum quas repellat, perferendis, earum\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "21. head three files",
+      "setup": "",
+      "run": "cabal -v0 run head test/haiku.txt test/haiku.txt test/lorem.txt",
+      "input": "",
+      "output": "==> test/haiku.txt <==\nHaskell's cryptic form\nis natural to some folks\nand so is haiku\n\n==> test/haiku.txt <==\nHaskell's cryptic form\nis natural to some folks\nand so is haiku\n\n==> test/lorem.txt <==\nLorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, iste dolor\ntenetur cumque rerum nesciunt laudantium dolores enim id exercitationem\nmolestias velit tempore ab amet recusandae repudiandae quam eius quisquam sunt\ndoloribus vel qui est? Repellendus expedita unde enim nostrum ut inventore? Quia\niste deleniti facere, doloribus tenetur veritatis voluptatem ea similique fuga\nfugiat temporibus aut ad ullam enim perferendis esse, ab cumque pariatur\narchitecto beatae. Tempora, incidunt recusandae repudiandae deleniti ratione\nreiciendis voluptatibus dolorum maxime vitae, cupiditate rerum temporibus at\ndoloribus quasi nam debitis molestiae veritatis! Soluta iusto odit laboriosam\nanimi dicta alias, blanditiis optio dolorum quas repellat, perferendis, earum\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "22. head two files, first missing",
+      "setup": "",
+      "run": "cabal -v0 run head test/haikuu.txt test/lorem.txt",
+      "input": "",
+      "output": "head: test/haikuu.txt: No such file or directory\n==> test/lorem.txt <==\nLorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, iste dolor\ntenetur cumque rerum nesciunt laudantium dolores enim id exercitationem\nmolestias velit tempore ab amet recusandae repudiandae quam eius quisquam sunt\ndoloribus vel qui est? Repellendus expedita unde enim nostrum ut inventore? Quia\niste deleniti facere, doloribus tenetur veritatis voluptatem ea similique fuga\nfugiat temporibus aut ad ullam enim perferendis esse, ab cumque pariatur\narchitecto beatae. Tempora, incidunt recusandae repudiandae deleniti ratione\nreiciendis voluptatibus dolorum maxime vitae, cupiditate rerum temporibus at\ndoloribus quasi nam debitis molestiae veritatis! Soluta iusto odit laboriosam\nanimi dicta alias, blanditiis optio dolorum quas repellat, perferendis, earum\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "23. head two files, second missing",
+      "setup": "",
+      "run": "cabal -v0 run head test/haiku.txt test/loorem.txt",
+      "input": "",
+      "output": "==> test/haiku.txt <==\nHaskell's cryptic form\nis natural to some folks\nand so is haiku\nhead: test/loorem.txt: No such file or directory\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "24. head three files, second missing",
+      "setup": "",
+      "run": "cabal -v0 run head test/haiku.txt test/haikuu.txt test/lorem.txt",
+      "input": "",
+      "output": "==> test/haiku.txt <==\nHaskell's cryptic form\nis natural to some folks\nand so is haiku\nhead: test/haikuu.txt: No such file or directory\n\n==> test/lorem.txt <==\nLorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, iste dolor\ntenetur cumque rerum nesciunt laudantium dolores enim id exercitationem\nmolestias velit tempore ab amet recusandae repudiandae quam eius quisquam sunt\ndoloribus vel qui est? Repellendus expedita unde enim nostrum ut inventore? Quia\niste deleniti facere, doloribus tenetur veritatis voluptatem ea similique fuga\nfugiat temporibus aut ad ullam enim perferendis esse, ab cumque pariatur\narchitecto beatae. Tempora, incidunt recusandae repudiandae deleniti ratione\nreiciendis voluptatibus dolorum maxime vitae, cupiditate rerum temporibus at\ndoloribus quasi nam debitis molestiae veritatis! Soluta iusto odit laboriosam\nanimi dicta alias, blanditiis optio dolorum quas repellat, perferendis, earum\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "25. tail single small file",
+      "setup": "",
+      "run": "cabal -v0 run tail test/haiku.txt",
+      "input": "",
+      "output": "Haskell's cryptic form\nis natural to some folks\nand so is haiku\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "26. tail single big file",
+      "setup": "",
+      "run": "cabal -v0 run tail test/lorem.txt",
+      "input": "",
+      "output": "natus at id aut? Facilis reiciendis beatae exercitationem fuga libero ea\nprovident, sint officiis, commodi est magnam cum dolor laudantium sed fugit\nnobis recusandae praesentium optio consectetur ducimus ut tenetur voluptatum!\nQuibusdam dolores modi reiciendis omnis accusamus maxime aliquid maiores, velit\neius impedit provident sunt inventore tempore, cum cumque eos itaque. Accusamus\nreprehenderit fugiat veritatis est rem fugit unde enim nesciunt vel consequuntur\nquisquam incidunt quaerat quidem exercitationem molestiae earum, doloribus alias\nvoluptatem a ullam! Quisquam quasi, incidunt veniam saepe ratione ipsum in\nconsectetur fugit repellendus aliquam dolores aut officia aperiam reiciendis\ndicta ea esse odio. Earum, placeat?\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "27. tail missing file",
+      "setup": "",
+      "run": "cabal -v0 run tail test/haikuu.txt",
+      "input": "",
+      "output": "tail: test/haikuu.txt: No such file or directory\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "28. tail two files",
+      "setup": "",
+      "run": "cabal -v0 run tail test/haiku.txt test/lorem.txt",
+      "input": "",
+      "output": "==> test/haiku.txt <==\nHaskell's cryptic form\nis natural to some folks\nand so is haiku\n\n==> test/lorem.txt <==\nnatus at id aut? Facilis reiciendis beatae exercitationem fuga libero ea\nprovident, sint officiis, commodi est magnam cum dolor laudantium sed fugit\nnobis recusandae praesentium optio consectetur ducimus ut tenetur voluptatum!\nQuibusdam dolores modi reiciendis omnis accusamus maxime aliquid maiores, velit\neius impedit provident sunt inventore tempore, cum cumque eos itaque. Accusamus\nreprehenderit fugiat veritatis est rem fugit unde enim nesciunt vel consequuntur\nquisquam incidunt quaerat quidem exercitationem molestiae earum, doloribus alias\nvoluptatem a ullam! Quisquam quasi, incidunt veniam saepe ratione ipsum in\nconsectetur fugit repellendus aliquam dolores aut officia aperiam reiciendis\ndicta ea esse odio. Earum, placeat?\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "29. tail three files",
+      "setup": "",
+      "run": "cabal -v0 run tail test/haiku.txt test/lorem.txt test/lorem.txt",
+      "input": "",
+      "output": "==> test/haiku.txt <==\nHaskell's cryptic form\nis natural to some folks\nand so is haiku\n\n==> test/lorem.txt <==\nnatus at id aut? Facilis reiciendis beatae exercitationem fuga libero ea\nprovident, sint officiis, commodi est magnam cum dolor laudantium sed fugit\nnobis recusandae praesentium optio consectetur ducimus ut tenetur voluptatum!\nQuibusdam dolores modi reiciendis omnis accusamus maxime aliquid maiores, velit\neius impedit provident sunt inventore tempore, cum cumque eos itaque. Accusamus\nreprehenderit fugiat veritatis est rem fugit unde enim nesciunt vel consequuntur\nquisquam incidunt quaerat quidem exercitationem molestiae earum, doloribus alias\nvoluptatem a ullam! Quisquam quasi, incidunt veniam saepe ratione ipsum in\nconsectetur fugit repellendus aliquam dolores aut officia aperiam reiciendis\ndicta ea esse odio. Earum, placeat?\n\n==> test/lorem.txt <==\nnatus at id aut? Facilis reiciendis beatae exercitationem fuga libero ea\nprovident, sint officiis, commodi est magnam cum dolor laudantium sed fugit\nnobis recusandae praesentium optio consectetur ducimus ut tenetur voluptatum!\nQuibusdam dolores modi reiciendis omnis accusamus maxime aliquid maiores, velit\neius impedit provident sunt inventore tempore, cum cumque eos itaque. Accusamus\nreprehenderit fugiat veritatis est rem fugit unde enim nesciunt vel consequuntur\nquisquam incidunt quaerat quidem exercitationem molestiae earum, doloribus alias\nvoluptatem a ullam! Quisquam quasi, incidunt veniam saepe ratione ipsum in\nconsectetur fugit repellendus aliquam dolores aut officia aperiam reiciendis\ndicta ea esse odio. Earum, placeat?\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "30. tail two files, first missing",
+      "setup": "",
+      "run": "cabal -v0 run tail test/haikuu.txt test/lorem.txt",
+      "input": "",
+      "output": "tail: test/haikuu.txt: No such file or directory\n==> test/lorem.txt <==\nnatus at id aut? Facilis reiciendis beatae exercitationem fuga libero ea\nprovident, sint officiis, commodi est magnam cum dolor laudantium sed fugit\nnobis recusandae praesentium optio consectetur ducimus ut tenetur voluptatum!\nQuibusdam dolores modi reiciendis omnis accusamus maxime aliquid maiores, velit\neius impedit provident sunt inventore tempore, cum cumque eos itaque. Accusamus\nreprehenderit fugiat veritatis est rem fugit unde enim nesciunt vel consequuntur\nquisquam incidunt quaerat quidem exercitationem molestiae earum, doloribus alias\nvoluptatem a ullam! Quisquam quasi, incidunt veniam saepe ratione ipsum in\nconsectetur fugit repellendus aliquam dolores aut officia aperiam reiciendis\ndicta ea esse odio. Earum, placeat?\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "31. head two files, second missing",
+      "setup": "",
+      "run": "cabal -v0 run tail test/haiku.txt test/loorem.txt",
+      "input": "",
+      "output": "==> test/haiku.txt <==\nHaskell's cryptic form\nis natural to some folks\nand so is haiku\ntail: test/loorem.txt: No such file or directory\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "32. tail three files, second missing",
+      "setup": "",
+      "run": "cabal -v0 run tail test/haiku.txt test/haikuu.txt test/lorem.txt",
+      "input": "",
+      "output": "==> test/haiku.txt <==\nHaskell's cryptic form\nis natural to some folks\nand so is haiku\ntail: test/haikuu.txt: No such file or directory\n\n==> test/lorem.txt <==\nnatus at id aut? Facilis reiciendis beatae exercitationem fuga libero ea\nprovident, sint officiis, commodi est magnam cum dolor laudantium sed fugit\nnobis recusandae praesentium optio consectetur ducimus ut tenetur voluptatum!\nQuibusdam dolores modi reiciendis omnis accusamus maxime aliquid maiores, velit\neius impedit provident sunt inventore tempore, cum cumque eos itaque. Accusamus\nreprehenderit fugiat veritatis est rem fugit unde enim nesciunt vel consequuntur\nquisquam incidunt quaerat quidem exercitationem molestiae earum, doloribus alias\nvoluptatem a ullam! Quisquam quasi, incidunt veniam saepe ratione ipsum in\nconsectetur fugit repellendus aliquam dolores aut officia aperiam reiciendis\ndicta ea esse odio. Earum, placeat?\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "33. sort file",
+      "setup": "",
+      "run": "cabal -v0 run sort test/haiku.txt",
+      "input": "",
+      "output": "Haskell's cryptic form\nand so is haiku\nis natural to some folks\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "34. sort two different files",
+      "setup": "",
+      "run": "cabal -v0 run sort test/haiku.txt test/lorem.txt",
+      "input": "",
+      "output": "Amet tempora debitis consectetur perferendis hic recusandae laborum quibusdam,\nDolores, eaque. Laborum odit adipisci cumque illo quasi dicta illum? Rerum\nExercitationem nulla reiciendis atque animi sed in adipisci dolorum facere quam\nHaskell's cryptic form\nLorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, iste dolor\nQuibusdam dolores modi reiciendis omnis accusamus maxime aliquid maiores, velit\nab numquam magnam provident eum, ipsa beatae quia unde similique dolorum esse\nab sunt corporis sit, reiciendis quidem nesciunt aliquam, nihil nam, asperiores\naccusantium neque, perspiciatis quas est, animi eaque eius totam non, numquam\nadipisci illum! Deserunt, itaque ducimus odio aliquam dolore corrupti eveniet\nalias molestias eaque. Deleniti laudantium accusamus blanditiis, tenetur quaerat\nalias repellendus, voluptatum quisquam nisi accusamus reiciendis. Distinctio\nand so is haiku\nanimi dicta alias, blanditiis optio dolorum quas repellat, perferendis, earum\naperiam praesentium animi perspiciatis ducimus quam consequuntur iusto\narchitecto beatae. Tempora, incidunt recusandae repudiandae deleniti ratione\naspernatur itaque consequatur, sint error nobis at necessitatibus distinctio\naspernatur sint odit consequuntur cupiditate! Aperiam magni similique numquam\nbeatae quibusdam totam? Eius obcaecati suscipit error ea? Soluta quas delectus\nbeatae temporibus accusamus laboriosam dolor quidem, doloremque aspernatur\nblanditiis. Vero inventore ea in minus nulla officia officiis accusantium nam\nconsectetur fugit repellendus aliquam dolores aut officia aperiam reiciendis\ncorrupti tenetur omnis voluptate facere cupiditate. Optio blanditiis quidem\nculpa consectetur. Saepe atque libero nisi ipsum odit ipsa maxime nihil dolorum\nculpa eaque consequatur a assumenda vel dicta aspernatur recusandae doloremque\ndicta ea esse odio. Earum, placeat?\ndignissimos! Iusto, laborum. Quae recusandae dolor, blanditiis reprehenderit\ndignissimos, accusamus, rerum recusandae vel consequuntur voluptatem earum,\ndistinctio suscipit sunt veritatis corrupti quasi hic non aperiam minima\ndoloremque, numquam ullam ab quisquam temporibus deserunt ut repudiandae\ndoloribus hic a blanditiis? Nihil repellendus, quasi incidunt unde amet,\ndoloribus quasi nam debitis molestiae veritatis! Soluta iusto odit laboriosam\ndoloribus vel qui est? Repellendus expedita unde enim nostrum ut inventore? Quia\ndolorum, necessitatibus facilis qui soluta cumque delectus repudiandae dicta!\neius impedit provident sunt inventore tempore, cum cumque eos itaque. Accusamus\neligendi perspiciatis dolorem. Minus officia pariatur at architecto quod\nerror, alias aperiam sunt natus libero, quibusdam vitae deserunt nostrum quia\nerror, non ratione iusto sed. Doloribus corporis reprehenderit nam at provident\net autem tempora. Mollitia qui temporibus rem aperiam neque autem fugiat dolorem\net. Maiores earum dolor natus illum cumque quas eos praesentium alias possimus\neum, vel tempore cumque facilis ipsum aspernatur dolore! Nesciunt maiores,\nexcepturi praesentium dolor in, voluptas perferendis nisi! Excepturi nisi\nexpedita eveniet perspiciatis eaque reiciendis illo suscipit dolorum animi fugit\nfugiat temporibus aut ad ullam enim perferendis esse, ab cumque pariatur\nfugit sint a veritatis amet voluptas quod quaerat aspernatur culpa quam\nharum nulla doloremque commodi ducimus eius, alias recusandae dolore aliquam\nharum. Ad voluptate nemo in tempore. Sed expedita culpa aliquam eveniet autem\nillo facere nihil animi aliquid, ex doloribus expedita tempore harum. Dolores\ninventore minima sapiente, nobis quam, accusantium, dolorum perspiciatis rem\nipsa. Ipsum aspernatur temporibus facilis ex, quam nemo delectus, eveniet\nipsa. Tempora, qui sit ex sed distinctio eligendi ratione, id fugiat asperiores\nipsum? Maiores consectetur aspernatur qui dolorum. Voluptate incidunt odit iusto\nipsum? Nihil, reprehenderit exercitationem dolore adipisci impedit ipsum\nis natural to some folks\niste deleniti facere, doloribus tenetur veritatis voluptatem ea similique fuga\niste excepturi? Tenetur corporis dicta dolores molestias, quasi labore cumque,\nitaque perferendis. Laudantium perspiciatis laboriosam sit commodi temporibus\niusto dicta minima consequuntur vero! Veniam nemo amet id ipsam laborum aliquam\niusto nisi, maxime, minus odit asperiores vitae cum dolor veritatis officia\nlaudantium ea iusto odio ipsa excepturi recusandae! Blanditiis facere ipsum fuga\nmagni deleniti similique enim, quis ab nesciunt obcaecati, facere eaque.\nmaiores illum. Veniam excepturi vero inventore eaque quo porro neque esse\nmaiores in laboriosam numquam quaerat necessitatibus corrupti facere laborum\nmolestias velit tempore ab amet recusandae repudiandae quam eius quisquam sunt\nnatus at id aut? Facilis reiciendis beatae exercitationem fuga libero ea\nneque quas ipsa quos, soluta vel repellat eius libero, illo nulla quisquam sunt,\nneque voluptates nesciunt aut nobis in! Sed architecto ipsam debitis libero\nnihil quidem, quos iste deleniti, dolore eum! Aliquid sit, praesentium\nnihil! Aperiam suscipit sequi aspernatur ducimus, iure dolorum libero quae atque\nnisi amet quibusdam mollitia exercitationem quo voluptate, eveniet ullam libero\nnobis recusandae praesentium optio consectetur ducimus ut tenetur voluptatum!\nofficia aliquid ullam alias laboriosam? Quo assumenda accusamus dolore libero\nofficiis molestias alias dicta dolore distinctio illo omnis eligendi nisi\nperspiciatis et dolorum doloribus maxime, minima at excepturi corrupti veniam\npossimus consequuntur facere quam ratione! Harum quo ducimus obcaecati quaerat\npossimus placeat rem quaerat quia quidem fugit laborum. Consequatur impedit cum,\nprovident itaque beatae soluta amet nihil corporis sapiente? Consectetur totam\nprovident, sint officiis, commodi est magnam cum dolor laudantium sed fugit\nquaerat autem aspernatur culpa, nobis alias voluptates, nam animi magni placeat\nquaerat labore praesentium suscipit doloremque atque modi alias laborum, quo\nquaerat suscipit doloremque labore, quisquam vitae eveniet obcaecati soluta\nquam, architecto cupiditate consectetur illo rem at similique voluptatum\nquia necessitatibus veritatis quos voluptates sapiente, quas distinctio totam.\nquia, obcaecati reprehenderit, nulla minus, voluptatem temporibus nemo sapiente\nquibusdam! Similique, quo. Rem molestiae qui corrupti quam, unde, laudantium\nquidem perferendis animi illum nisi temporibus iusto maiores distinctio\nquisquam incidunt quaerat quidem exercitationem molestiae earum, doloribus alias\nreiciendis soluta laborum qui eos omnis placeat beatae molestiae! Quos eius\nreiciendis voluptatibus dolorum maxime vitae, cupiditate rerum temporibus at\nreprehenderit fugiat veritatis est rem fugit unde enim nesciunt vel consequuntur\nrepudiandae quos assumenda aliquam voluptatum labore nemo porro deserunt\nrerum doloribus ea dolorem fugit expedita vel eveniet ipsa explicabo? Quis iusto\nsapiente aspernatur ex minima corrupti, alias quidem! Aut ratione aperiam fuga\ntempora eum corrupti, magnam fugiat reiciendis, rem placeat dolorem, minus\ntenetur beatae fuga itaque magni iste pariatur atque delectus, maxime quos nulla\ntenetur cumque rerum nesciunt laudantium dolores enim id exercitationem\ntotam laborum maxime, error mollitia. Nesciunt pariatur odio dolorum tenetur\nvel, hic quam nemo dolorum odio consequuntur iure a repellendus nesciunt, quae\nvoluptate commodi dicta porro perferendis fugiat, officia illo id animi\nvoluptatem a ullam! Quisquam quasi, incidunt veniam saepe ratione ipsum in\nvoluptatem quis magni sit at hic neque? Reprehenderit praesentium repellat\nvoluptatibus nemo consequatur quisquam aut nihil quia voluptate omnis minima\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "35. sort two same files",
+      "setup": "",
+      "run": "cabal -v0 run sort test/haiku.txt test/haiku.txt",
+      "input": "",
+      "output": "Haskell's cryptic form\nHaskell's cryptic form\nand so is haiku\nand so is haiku\nis natural to some folks\nis natural to some folks\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "36. sort missing file",
+      "setup": "",
+      "run": "cabal -v0 run sort test/haikuu.txt",
+      "input": "",
+      "output": "sort: No such file or directory\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "37. sort two files, one missing",
+      "setup": "",
+      "run": "cabal -v0 run sort test/haiku.txt test/haikuu.txt",
+      "input": "",
+      "output": "sort: No such file or directory\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "38. sort a bunch of the same files",
+      "setup": "",
+      "run": "cabal -v0 run sort test/haiku.txt test/lorem.txt test/haiku.txt test/lorem.txt",
+      "input": "",
+      "output": "Amet tempora debitis consectetur perferendis hic recusandae laborum quibusdam,\nAmet tempora debitis consectetur perferendis hic recusandae laborum quibusdam,\nDolores, eaque. Laborum odit adipisci cumque illo quasi dicta illum? Rerum\nDolores, eaque. Laborum odit adipisci cumque illo quasi dicta illum? Rerum\nExercitationem nulla reiciendis atque animi sed in adipisci dolorum facere quam\nExercitationem nulla reiciendis atque animi sed in adipisci dolorum facere quam\nHaskell's cryptic form\nHaskell's cryptic form\nLorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, iste dolor\nLorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, iste dolor\nQuibusdam dolores modi reiciendis omnis accusamus maxime aliquid maiores, velit\nQuibusdam dolores modi reiciendis omnis accusamus maxime aliquid maiores, velit\nab numquam magnam provident eum, ipsa beatae quia unde similique dolorum esse\nab numquam magnam provident eum, ipsa beatae quia unde similique dolorum esse\nab sunt corporis sit, reiciendis quidem nesciunt aliquam, nihil nam, asperiores\nab sunt corporis sit, reiciendis quidem nesciunt aliquam, nihil nam, asperiores\naccusantium neque, perspiciatis quas est, animi eaque eius totam non, numquam\naccusantium neque, perspiciatis quas est, animi eaque eius totam non, numquam\nadipisci illum! Deserunt, itaque ducimus odio aliquam dolore corrupti eveniet\nadipisci illum! Deserunt, itaque ducimus odio aliquam dolore corrupti eveniet\nalias molestias eaque. Deleniti laudantium accusamus blanditiis, tenetur quaerat\nalias molestias eaque. Deleniti laudantium accusamus blanditiis, tenetur quaerat\nalias repellendus, voluptatum quisquam nisi accusamus reiciendis. Distinctio\nalias repellendus, voluptatum quisquam nisi accusamus reiciendis. Distinctio\nand so is haiku\nand so is haiku\nanimi dicta alias, blanditiis optio dolorum quas repellat, perferendis, earum\nanimi dicta alias, blanditiis optio dolorum quas repellat, perferendis, earum\naperiam praesentium animi perspiciatis ducimus quam consequuntur iusto\naperiam praesentium animi perspiciatis ducimus quam consequuntur iusto\narchitecto beatae. Tempora, incidunt recusandae repudiandae deleniti ratione\narchitecto beatae. Tempora, incidunt recusandae repudiandae deleniti ratione\naspernatur itaque consequatur, sint error nobis at necessitatibus distinctio\naspernatur itaque consequatur, sint error nobis at necessitatibus distinctio\naspernatur sint odit consequuntur cupiditate! Aperiam magni similique numquam\naspernatur sint odit consequuntur cupiditate! Aperiam magni similique numquam\nbeatae quibusdam totam? Eius obcaecati suscipit error ea? Soluta quas delectus\nbeatae quibusdam totam? Eius obcaecati suscipit error ea? Soluta quas delectus\nbeatae temporibus accusamus laboriosam dolor quidem, doloremque aspernatur\nbeatae temporibus accusamus laboriosam dolor quidem, doloremque aspernatur\nblanditiis. Vero inventore ea in minus nulla officia officiis accusantium nam\nblanditiis. Vero inventore ea in minus nulla officia officiis accusantium nam\nconsectetur fugit repellendus aliquam dolores aut officia aperiam reiciendis\nconsectetur fugit repellendus aliquam dolores aut officia aperiam reiciendis\ncorrupti tenetur omnis voluptate facere cupiditate. Optio blanditiis quidem\ncorrupti tenetur omnis voluptate facere cupiditate. Optio blanditiis quidem\nculpa consectetur. Saepe atque libero nisi ipsum odit ipsa maxime nihil dolorum\nculpa consectetur. Saepe atque libero nisi ipsum odit ipsa maxime nihil dolorum\nculpa eaque consequatur a assumenda vel dicta aspernatur recusandae doloremque\nculpa eaque consequatur a assumenda vel dicta aspernatur recusandae doloremque\ndicta ea esse odio. Earum, placeat?\ndicta ea esse odio. Earum, placeat?\ndignissimos! Iusto, laborum. Quae recusandae dolor, blanditiis reprehenderit\ndignissimos! Iusto, laborum. Quae recusandae dolor, blanditiis reprehenderit\ndignissimos, accusamus, rerum recusandae vel consequuntur voluptatem earum,\ndignissimos, accusamus, rerum recusandae vel consequuntur voluptatem earum,\ndistinctio suscipit sunt veritatis corrupti quasi hic non aperiam minima\ndistinctio suscipit sunt veritatis corrupti quasi hic non aperiam minima\ndoloremque, numquam ullam ab quisquam temporibus deserunt ut repudiandae\ndoloremque, numquam ullam ab quisquam temporibus deserunt ut repudiandae\ndoloribus hic a blanditiis? Nihil repellendus, quasi incidunt unde amet,\ndoloribus hic a blanditiis? Nihil repellendus, quasi incidunt unde amet,\ndoloribus quasi nam debitis molestiae veritatis! Soluta iusto odit laboriosam\ndoloribus quasi nam debitis molestiae veritatis! Soluta iusto odit laboriosam\ndoloribus vel qui est? Repellendus expedita unde enim nostrum ut inventore? Quia\ndoloribus vel qui est? Repellendus expedita unde enim nostrum ut inventore? Quia\ndolorum, necessitatibus facilis qui soluta cumque delectus repudiandae dicta!\ndolorum, necessitatibus facilis qui soluta cumque delectus repudiandae dicta!\neius impedit provident sunt inventore tempore, cum cumque eos itaque. Accusamus\neius impedit provident sunt inventore tempore, cum cumque eos itaque. Accusamus\neligendi perspiciatis dolorem. Minus officia pariatur at architecto quod\neligendi perspiciatis dolorem. Minus officia pariatur at architecto quod\nerror, alias aperiam sunt natus libero, quibusdam vitae deserunt nostrum quia\nerror, alias aperiam sunt natus libero, quibusdam vitae deserunt nostrum quia\nerror, non ratione iusto sed. Doloribus corporis reprehenderit nam at provident\nerror, non ratione iusto sed. Doloribus corporis reprehenderit nam at provident\net autem tempora. Mollitia qui temporibus rem aperiam neque autem fugiat dolorem\net autem tempora. Mollitia qui temporibus rem aperiam neque autem fugiat dolorem\net. Maiores earum dolor natus illum cumque quas eos praesentium alias possimus\net. Maiores earum dolor natus illum cumque quas eos praesentium alias possimus\neum, vel tempore cumque facilis ipsum aspernatur dolore! Nesciunt maiores,\neum, vel tempore cumque facilis ipsum aspernatur dolore! Nesciunt maiores,\nexcepturi praesentium dolor in, voluptas perferendis nisi! Excepturi nisi\nexcepturi praesentium dolor in, voluptas perferendis nisi! Excepturi nisi\nexpedita eveniet perspiciatis eaque reiciendis illo suscipit dolorum animi fugit\nexpedita eveniet perspiciatis eaque reiciendis illo suscipit dolorum animi fugit\nfugiat temporibus aut ad ullam enim perferendis esse, ab cumque pariatur\nfugiat temporibus aut ad ullam enim perferendis esse, ab cumque pariatur\nfugit sint a veritatis amet voluptas quod quaerat aspernatur culpa quam\nfugit sint a veritatis amet voluptas quod quaerat aspernatur culpa quam\nharum nulla doloremque commodi ducimus eius, alias recusandae dolore aliquam\nharum nulla doloremque commodi ducimus eius, alias recusandae dolore aliquam\nharum. Ad voluptate nemo in tempore. Sed expedita culpa aliquam eveniet autem\nharum. Ad voluptate nemo in tempore. Sed expedita culpa aliquam eveniet autem\nillo facere nihil animi aliquid, ex doloribus expedita tempore harum. Dolores\nillo facere nihil animi aliquid, ex doloribus expedita tempore harum. Dolores\ninventore minima sapiente, nobis quam, accusantium, dolorum perspiciatis rem\ninventore minima sapiente, nobis quam, accusantium, dolorum perspiciatis rem\nipsa. Ipsum aspernatur temporibus facilis ex, quam nemo delectus, eveniet\nipsa. Ipsum aspernatur temporibus facilis ex, quam nemo delectus, eveniet\nipsa. Tempora, qui sit ex sed distinctio eligendi ratione, id fugiat asperiores\nipsa. Tempora, qui sit ex sed distinctio eligendi ratione, id fugiat asperiores\nipsum? Maiores consectetur aspernatur qui dolorum. Voluptate incidunt odit iusto\nipsum? Maiores consectetur aspernatur qui dolorum. Voluptate incidunt odit iusto\nipsum? Nihil, reprehenderit exercitationem dolore adipisci impedit ipsum\nipsum? Nihil, reprehenderit exercitationem dolore adipisci impedit ipsum\nis natural to some folks\nis natural to some folks\niste deleniti facere, doloribus tenetur veritatis voluptatem ea similique fuga\niste deleniti facere, doloribus tenetur veritatis voluptatem ea similique fuga\niste excepturi? Tenetur corporis dicta dolores molestias, quasi labore cumque,\niste excepturi? Tenetur corporis dicta dolores molestias, quasi labore cumque,\nitaque perferendis. Laudantium perspiciatis laboriosam sit commodi temporibus\nitaque perferendis. Laudantium perspiciatis laboriosam sit commodi temporibus\niusto dicta minima consequuntur vero! Veniam nemo amet id ipsam laborum aliquam\niusto dicta minima consequuntur vero! Veniam nemo amet id ipsam laborum aliquam\niusto nisi, maxime, minus odit asperiores vitae cum dolor veritatis officia\niusto nisi, maxime, minus odit asperiores vitae cum dolor veritatis officia\nlaudantium ea iusto odio ipsa excepturi recusandae! Blanditiis facere ipsum fuga\nlaudantium ea iusto odio ipsa excepturi recusandae! Blanditiis facere ipsum fuga\nmagni deleniti similique enim, quis ab nesciunt obcaecati, facere eaque.\nmagni deleniti similique enim, quis ab nesciunt obcaecati, facere eaque.\nmaiores illum. Veniam excepturi vero inventore eaque quo porro neque esse\nmaiores illum. Veniam excepturi vero inventore eaque quo porro neque esse\nmaiores in laboriosam numquam quaerat necessitatibus corrupti facere laborum\nmaiores in laboriosam numquam quaerat necessitatibus corrupti facere laborum\nmolestias velit tempore ab amet recusandae repudiandae quam eius quisquam sunt\nmolestias velit tempore ab amet recusandae repudiandae quam eius quisquam sunt\nnatus at id aut? Facilis reiciendis beatae exercitationem fuga libero ea\nnatus at id aut? Facilis reiciendis beatae exercitationem fuga libero ea\nneque quas ipsa quos, soluta vel repellat eius libero, illo nulla quisquam sunt,\nneque quas ipsa quos, soluta vel repellat eius libero, illo nulla quisquam sunt,\nneque voluptates nesciunt aut nobis in! Sed architecto ipsam debitis libero\nneque voluptates nesciunt aut nobis in! Sed architecto ipsam debitis libero\nnihil quidem, quos iste deleniti, dolore eum! Aliquid sit, praesentium\nnihil quidem, quos iste deleniti, dolore eum! Aliquid sit, praesentium\nnihil! Aperiam suscipit sequi aspernatur ducimus, iure dolorum libero quae atque\nnihil! Aperiam suscipit sequi aspernatur ducimus, iure dolorum libero quae atque\nnisi amet quibusdam mollitia exercitationem quo voluptate, eveniet ullam libero\nnisi amet quibusdam mollitia exercitationem quo voluptate, eveniet ullam libero\nnobis recusandae praesentium optio consectetur ducimus ut tenetur voluptatum!\nnobis recusandae praesentium optio consectetur ducimus ut tenetur voluptatum!\nofficia aliquid ullam alias laboriosam? Quo assumenda accusamus dolore libero\nofficia aliquid ullam alias laboriosam? Quo assumenda accusamus dolore libero\nofficiis molestias alias dicta dolore distinctio illo omnis eligendi nisi\nofficiis molestias alias dicta dolore distinctio illo omnis eligendi nisi\nperspiciatis et dolorum doloribus maxime, minima at excepturi corrupti veniam\nperspiciatis et dolorum doloribus maxime, minima at excepturi corrupti veniam\npossimus consequuntur facere quam ratione! Harum quo ducimus obcaecati quaerat\npossimus consequuntur facere quam ratione! Harum quo ducimus obcaecati quaerat\npossimus placeat rem quaerat quia quidem fugit laborum. Consequatur impedit cum,\npossimus placeat rem quaerat quia quidem fugit laborum. Consequatur impedit cum,\nprovident itaque beatae soluta amet nihil corporis sapiente? Consectetur totam\nprovident itaque beatae soluta amet nihil corporis sapiente? Consectetur totam\nprovident, sint officiis, commodi est magnam cum dolor laudantium sed fugit\nprovident, sint officiis, commodi est magnam cum dolor laudantium sed fugit\nquaerat autem aspernatur culpa, nobis alias voluptates, nam animi magni placeat\nquaerat autem aspernatur culpa, nobis alias voluptates, nam animi magni placeat\nquaerat labore praesentium suscipit doloremque atque modi alias laborum, quo\nquaerat labore praesentium suscipit doloremque atque modi alias laborum, quo\nquaerat suscipit doloremque labore, quisquam vitae eveniet obcaecati soluta\nquaerat suscipit doloremque labore, quisquam vitae eveniet obcaecati soluta\nquam, architecto cupiditate consectetur illo rem at similique voluptatum\nquam, architecto cupiditate consectetur illo rem at similique voluptatum\nquia necessitatibus veritatis quos voluptates sapiente, quas distinctio totam.\nquia necessitatibus veritatis quos voluptates sapiente, quas distinctio totam.\nquia, obcaecati reprehenderit, nulla minus, voluptatem temporibus nemo sapiente\nquia, obcaecati reprehenderit, nulla minus, voluptatem temporibus nemo sapiente\nquibusdam! Similique, quo. Rem molestiae qui corrupti quam, unde, laudantium\nquibusdam! Similique, quo. Rem molestiae qui corrupti quam, unde, laudantium\nquidem perferendis animi illum nisi temporibus iusto maiores distinctio\nquidem perferendis animi illum nisi temporibus iusto maiores distinctio\nquisquam incidunt quaerat quidem exercitationem molestiae earum, doloribus alias\nquisquam incidunt quaerat quidem exercitationem molestiae earum, doloribus alias\nreiciendis soluta laborum qui eos omnis placeat beatae molestiae! Quos eius\nreiciendis soluta laborum qui eos omnis placeat beatae molestiae! Quos eius\nreiciendis voluptatibus dolorum maxime vitae, cupiditate rerum temporibus at\nreiciendis voluptatibus dolorum maxime vitae, cupiditate rerum temporibus at\nreprehenderit fugiat veritatis est rem fugit unde enim nesciunt vel consequuntur\nreprehenderit fugiat veritatis est rem fugit unde enim nesciunt vel consequuntur\nrepudiandae quos assumenda aliquam voluptatum labore nemo porro deserunt\nrepudiandae quos assumenda aliquam voluptatum labore nemo porro deserunt\nrerum doloribus ea dolorem fugit expedita vel eveniet ipsa explicabo? Quis iusto\nrerum doloribus ea dolorem fugit expedita vel eveniet ipsa explicabo? Quis iusto\nsapiente aspernatur ex minima corrupti, alias quidem! Aut ratione aperiam fuga\nsapiente aspernatur ex minima corrupti, alias quidem! Aut ratione aperiam fuga\ntempora eum corrupti, magnam fugiat reiciendis, rem placeat dolorem, minus\ntempora eum corrupti, magnam fugiat reiciendis, rem placeat dolorem, minus\ntenetur beatae fuga itaque magni iste pariatur atque delectus, maxime quos nulla\ntenetur beatae fuga itaque magni iste pariatur atque delectus, maxime quos nulla\ntenetur cumque rerum nesciunt laudantium dolores enim id exercitationem\ntenetur cumque rerum nesciunt laudantium dolores enim id exercitationem\ntotam laborum maxime, error mollitia. Nesciunt pariatur odio dolorum tenetur\ntotam laborum maxime, error mollitia. Nesciunt pariatur odio dolorum tenetur\nvel, hic quam nemo dolorum odio consequuntur iure a repellendus nesciunt, quae\nvel, hic quam nemo dolorum odio consequuntur iure a repellendus nesciunt, quae\nvoluptate commodi dicta porro perferendis fugiat, officia illo id animi\nvoluptate commodi dicta porro perferendis fugiat, officia illo id animi\nvoluptatem a ullam! Quisquam quasi, incidunt veniam saepe ratione ipsum in\nvoluptatem a ullam! Quisquam quasi, incidunt veniam saepe ratione ipsum in\nvoluptatem quis magni sit at hic neque? Reprehenderit praesentium repellat\nvoluptatem quis magni sit at hic neque? Reprehenderit praesentium repellat\nvoluptatibus nemo consequatur quisquam aut nihil quia voluptate omnis minima\nvoluptatibus nemo consequatur quisquam aut nihil quia voluptate omnis minima\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "39. cp small file",
+      "setup": "",
+      "run": "cabal -v0 run cp test/haiku.txt test/haiku2.txt && cabal -v0 run cat test/haiku2.txt",
+      "input": "",
+      "output": "Haskell's cryptic form\nis natural to some folks\nand so is haiku\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "40. cp big file",
+      "setup": "",
+      "run": "cabal -v0 run cp test/lorem.txt test/lorem2.txt && cabal -v0 run cat test/lorem2.txt",
+      "input": "",
+      "output": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, iste dolor\ntenetur cumque rerum nesciunt laudantium dolores enim id exercitationem\nmolestias velit tempore ab amet recusandae repudiandae quam eius quisquam sunt\ndoloribus vel qui est? Repellendus expedita unde enim nostrum ut inventore? Quia\niste deleniti facere, doloribus tenetur veritatis voluptatem ea similique fuga\nfugiat temporibus aut ad ullam enim perferendis esse, ab cumque pariatur\narchitecto beatae. Tempora, incidunt recusandae repudiandae deleniti ratione\nreiciendis voluptatibus dolorum maxime vitae, cupiditate rerum temporibus at\ndoloribus quasi nam debitis molestiae veritatis! Soluta iusto odit laboriosam\nanimi dicta alias, blanditiis optio dolorum quas repellat, perferendis, earum\nipsa. Tempora, qui sit ex sed distinctio eligendi ratione, id fugiat asperiores\nneque voluptates nesciunt aut nobis in! Sed architecto ipsam debitis libero\ntempora eum corrupti, magnam fugiat reiciendis, rem placeat dolorem, minus\nipsum? Maiores consectetur aspernatur qui dolorum. Voluptate incidunt odit iusto\nbeatae temporibus accusamus laboriosam dolor quidem, doloremque aspernatur\nharum. Ad voluptate nemo in tempore. Sed expedita culpa aliquam eveniet autem\nerror, alias aperiam sunt natus libero, quibusdam vitae deserunt nostrum quia\neum, vel tempore cumque facilis ipsum aspernatur dolore! Nesciunt maiores,\nrepudiandae quos assumenda aliquam voluptatum labore nemo porro deserunt\nadipisci illum! Deserunt, itaque ducimus odio aliquam dolore corrupti eveniet\nvoluptatem quis magni sit at hic neque? Reprehenderit praesentium repellat\nexpedita eveniet perspiciatis eaque reiciendis illo suscipit dolorum animi fugit\nerror, non ratione iusto sed. Doloribus corporis reprehenderit nam at provident\nmaiores illum. Veniam excepturi vero inventore eaque quo porro neque esse\ntenetur beatae fuga itaque magni iste pariatur atque delectus, maxime quos nulla\npossimus consequuntur facere quam ratione! Harum quo ducimus obcaecati quaerat\niusto dicta minima consequuntur vero! Veniam nemo amet id ipsam laborum aliquam\nillo facere nihil animi aliquid, ex doloribus expedita tempore harum. Dolores\ndignissimos, accusamus, rerum recusandae vel consequuntur voluptatem earum,\nofficia aliquid ullam alias laboriosam? Quo assumenda accusamus dolore libero\nquam, architecto cupiditate consectetur illo rem at similique voluptatum\nexcepturi praesentium dolor in, voluptas perferendis nisi! Excepturi nisi\naperiam praesentium animi perspiciatis ducimus quam consequuntur iusto\ndoloremque, numquam ullam ab quisquam temporibus deserunt ut repudiandae\nreiciendis soluta laborum qui eos omnis placeat beatae molestiae! Quos eius\nprovident itaque beatae soluta amet nihil corporis sapiente? Consectetur totam\niusto nisi, maxime, minus odit asperiores vitae cum dolor veritatis officia\nquibusdam! Similique, quo. Rem molestiae qui corrupti quam, unde, laudantium\nharum nulla doloremque commodi ducimus eius, alias recusandae dolore aliquam\nipsa. Ipsum aspernatur temporibus facilis ex, quam nemo delectus, eveniet\nquaerat labore praesentium suscipit doloremque atque modi alias laborum, quo\nblanditiis. Vero inventore ea in minus nulla officia officiis accusantium nam\nalias repellendus, voluptatum quisquam nisi accusamus reiciendis. Distinctio\nquia, obcaecati reprehenderit, nulla minus, voluptatem temporibus nemo sapiente\nrerum doloribus ea dolorem fugit expedita vel eveniet ipsa explicabo? Quis iusto\nfugit sint a veritatis amet voluptas quod quaerat aspernatur culpa quam\nperspiciatis et dolorum doloribus maxime, minima at excepturi corrupti veniam\nbeatae quibusdam totam? Eius obcaecati suscipit error ea? Soluta quas delectus\nab sunt corporis sit, reiciendis quidem nesciunt aliquam, nihil nam, asperiores\ndoloribus hic a blanditiis? Nihil repellendus, quasi incidunt unde amet,\npossimus placeat rem quaerat quia quidem fugit laborum. Consequatur impedit cum,\nquaerat autem aspernatur culpa, nobis alias voluptates, nam animi magni placeat\ndignissimos! Iusto, laborum. Quae recusandae dolor, blanditiis reprehenderit\ndolorum, necessitatibus facilis qui soluta cumque delectus repudiandae dicta!\nDolores, eaque. Laborum odit adipisci cumque illo quasi dicta illum? Rerum\nmaiores in laboriosam numquam quaerat necessitatibus corrupti facere laborum\nneque quas ipsa quos, soluta vel repellat eius libero, illo nulla quisquam sunt,\net autem tempora. Mollitia qui temporibus rem aperiam neque autem fugiat dolorem\niste excepturi? Tenetur corporis dicta dolores molestias, quasi labore cumque,\nquidem perferendis animi illum nisi temporibus iusto maiores distinctio\nvoluptatibus nemo consequatur quisquam aut nihil quia voluptate omnis minima\nculpa consectetur. Saepe atque libero nisi ipsum odit ipsa maxime nihil dolorum\nquaerat suscipit doloremque labore, quisquam vitae eveniet obcaecati soluta\nsapiente aspernatur ex minima corrupti, alias quidem! Aut ratione aperiam fuga\naccusantium neque, perspiciatis quas est, animi eaque eius totam non, numquam\nnihil! Aperiam suscipit sequi aspernatur ducimus, iure dolorum libero quae atque\nnihil quidem, quos iste deleniti, dolore eum! Aliquid sit, praesentium\naspernatur itaque consequatur, sint error nobis at necessitatibus distinctio\nnisi amet quibusdam mollitia exercitationem quo voluptate, eveniet ullam libero\neligendi perspiciatis dolorem. Minus officia pariatur at architecto quod\nofficiis molestias alias dicta dolore distinctio illo omnis eligendi nisi\ninventore minima sapiente, nobis quam, accusantium, dolorum perspiciatis rem\nitaque perferendis. Laudantium perspiciatis laboriosam sit commodi temporibus\nculpa eaque consequatur a assumenda vel dicta aspernatur recusandae doloremque\nquia necessitatibus veritatis quos voluptates sapiente, quas distinctio totam.\nAmet tempora debitis consectetur perferendis hic recusandae laborum quibusdam,\nmagni deleniti similique enim, quis ab nesciunt obcaecati, facere eaque.\nExercitationem nulla reiciendis atque animi sed in adipisci dolorum facere quam\net. Maiores earum dolor natus illum cumque quas eos praesentium alias possimus\nab numquam magnam provident eum, ipsa beatae quia unde similique dolorum esse\ncorrupti tenetur omnis voluptate facere cupiditate. Optio blanditiis quidem\ntotam laborum maxime, error mollitia. Nesciunt pariatur odio dolorum tenetur\nalias molestias eaque. Deleniti laudantium accusamus blanditiis, tenetur quaerat\nipsum? Nihil, reprehenderit exercitationem dolore adipisci impedit ipsum\nlaudantium ea iusto odio ipsa excepturi recusandae! Blanditiis facere ipsum fuga\ndistinctio suscipit sunt veritatis corrupti quasi hic non aperiam minima\nvoluptate commodi dicta porro perferendis fugiat, officia illo id animi\naspernatur sint odit consequuntur cupiditate! Aperiam magni similique numquam\nvel, hic quam nemo dolorum odio consequuntur iure a repellendus nesciunt, quae\nnatus at id aut? Facilis reiciendis beatae exercitationem fuga libero ea\nprovident, sint officiis, commodi est magnam cum dolor laudantium sed fugit\nnobis recusandae praesentium optio consectetur ducimus ut tenetur voluptatum!\nQuibusdam dolores modi reiciendis omnis accusamus maxime aliquid maiores, velit\neius impedit provident sunt inventore tempore, cum cumque eos itaque. Accusamus\nreprehenderit fugiat veritatis est rem fugit unde enim nesciunt vel consequuntur\nquisquam incidunt quaerat quidem exercitationem molestiae earum, doloribus alias\nvoluptatem a ullam! Quisquam quasi, incidunt veniam saepe ratione ipsum in\nconsectetur fugit repellendus aliquam dolores aut officia aperiam reiciendis\ndicta ea esse odio. Earum, placeat?\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "41. cp identical files",
+      "setup": "",
+      "run": "cabal -v0 run cp test/lorem.txt test/lorem.txt",
+      "input": "",
+      "output": "cp: test/lorem.txt and test/lorem.txt are identical (not copied).\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "42. cp missing file",
+      "setup": "",
+      "run": "cabal -v0 run cp test/lorem1.txt test/lorem.txt",
+      "input": "",
+      "output": "cp: test/lorem1.txt: No such file or directory\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "43. cp to existing file",
+      "setup": "",
+      "run": "cabal -v0 run cp test/haiku.txt test/lorem2.txt && cabal -v0 run cat test/lorem2.txt",
+      "input": "",
+      "output": "Haskell's cryptic form\nis natural to some folks\nand so is haiku\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "44. cp to missing directory",
+      "setup": "",
+      "run": "cabal -v0 run cp test/haiku.txt text/lorem2.txt",
+      "input": "",
+      "output": "cp: text/lorem2.txt: No such file or directory\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "45. cp to missing directory",
+      "setup": "",
+      "run": "cabal -v0 run cp test/haiku.txt text/lorem2.txt",
+      "input": "",
+      "output": "cp: text/lorem2.txt: No such file or directory\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "46. cp three files",
+      "setup": "",
+      "run": "cabal -v0 run cp test/haiku.txt text/lorem2.txt test/lorem.txt",
+      "input": "",
+      "output": "usage: cp source_file target_file\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "47. empty curl",
+      "setup": "",
+      "run": "cabal -v0 run curl",
+      "input": "",
+      "output": "usage: curl url [urls]\n",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "48. curl zippopotamus",
+      "setup": "",
+      "run": "cabal -v0 run curl api.zippopotam.us/us/82070",
+      "input": "",
+      "output": "{\"post code\": \"82070\", \"country\": \"United States\", \"country abbreviation\": \"US\", \"places\": [{\"place name\": \"Laramie\", \"longitude\": \"-105.801\", \"state\": \"Wyoming\", \"state abbreviation\": \"WY\", \"latitude\": \"41.439\"}]}",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "49. curl zippopotamus with scheme",
+      "setup": "",
+      "run": "cabal -v0 run curl http://api.zippopotam.us/us/82070",
+      "input": "",
+      "output": "{\"post code\": \"82070\", \"country\": \"United States\", \"country abbreviation\": \"US\", \"places\": [{\"place name\": \"Laramie\", \"longitude\": \"-105.801\", \"state\": \"Wyoming\", \"state abbreviation\": \"WY\", \"latitude\": \"41.439\"}]}",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "50. curl universities api",
+      "setup": "",
+      "run": "cabal -v0 run curl http://universities.hipolabs.com/search?name=University+of+Wyoming",
+      "input": "",
+      "output": "[{\"country\": \"United States\", \"name\": \"University of Wyoming\", \"alpha_two_code\": \"US\", \"state-province\": null, \"domains\": [\"uwyo.edu\"], \"web_pages\": [\"http://www.uwyo.edu/\"]}]",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "51. curl ascii art api",
+      "setup": "",
+      "run": "cabal -v0 run curl \"http://artii.herokuapp.com/make?text=haskell&font=caligraphy\"",
+      "input": "",
+      "output": "                                                                     \n  *                               *                  ***     ***     \n**                              **                    ***     ***    \n**                              **                     **      **    \n**                              **                     **      **    \n**                      ****    **                     **      **    \n**  ***      ****      * **** * **  ***       ***      **      **    \n** * ***    * ***  *  **  ****  ** * ***     * ***     **      **    \n***   ***  *   ****  ****       ***   *     *   ***    **      **    \n**     ** **    **     ***      **   *     **    ***   **      **    \n**     ** **    **       ***    **  *      ********    **      **    \n**     ** **    **         ***  ** **      *******     **      **    \n**     ** **    **    ****  **  ******     **          **      **    \n**     ** **    **   * **** *   **  ***    ****    *   **      **    \n**     **  ***** **     ****    **   *** *  *******    *** *   *** * \n **    **   ***   **             **   ***    *****      ***     ***  \n       *                                                             \n      *                                                              \n     *                                                               \n    *                                                                \n                                                                     ",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    }
+  ]
+}

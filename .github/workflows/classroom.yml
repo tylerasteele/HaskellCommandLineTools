@@ -1,0 +1,14 @@
+    name: GitHub Classroom Workflow
+
+    on: [push]
+
+    jobs:
+      build:
+        name: Autograding
+        runs-on: ubuntu-latest
+        steps:
+          - name: Set up cabal
+            run: |
+              cabal update
+          - uses: actions/checkout@v2
+          - uses: education/autograding@v1

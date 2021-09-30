@@ -1,0 +1,50 @@
+cabal-version:      3.0
+
+name:               midterm
+version:            0.1.0.0
+
+common shared-properties
+  default-language: Haskell2010
+  build-depends:
+    base >=4.5 && <4.17,
+    directory == 1.3.7.0,
+    filepath == 1.4.2.1
+
+executable echo
+    import:           shared-properties
+    hs-source-dirs:   echo
+    main-is:          Main.hs
+executable cat
+    import:           shared-properties
+    hs-source-dirs:   cat
+    main-is:          Main.hs
+executable rev
+    import:           shared-properties
+    hs-source-dirs:   rev
+    main-is:          Main.hs
+executable head
+    import:           shared-properties
+    hs-source-dirs:   head
+    main-is:          Main.hs
+executable tail
+    import:           shared-properties
+    hs-source-dirs:   tail
+    main-is:          Main.hs
+executable sort
+    import:           shared-properties
+    hs-source-dirs:   sort
+    main-is:          Main.hs
+executable cp
+    import:           shared-properties
+    hs-source-dirs:   cp
+    main-is:          Main.hs
+executable curl
+    import: shared-properties
+    build-depends: 
+      HTTP == 4000.3.16,
+      dns == 4.0.1,
+      bytestring == 0.11.1.0,
+      utf8-string == 1.0.2,
+      iproute == 1.7.7
+    hs-source-dirs:   curl
+    main-is:          Main.hs
