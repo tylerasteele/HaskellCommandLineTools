@@ -28,7 +28,7 @@ dispFiles x = do
     if fileExist 
         then do
             contents <- readFile x 
-            putStrLn contents 
+            putStr contents 
         else do
             let exc = "cat: " ++ x ++ ": No such file or directory"
             putStrLn exc

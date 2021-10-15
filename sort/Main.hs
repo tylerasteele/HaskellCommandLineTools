@@ -10,12 +10,13 @@ main :: IO ()
 main = do 
     fNames <- getArgs 
 
-    -- do all files exists?
+    -- do all files exists?\
+    {-
     if andAnd fNames then 
         putStrLn "True"
     else 
         putStrLn "False "
-
+    -}
 
     fileHandle fNames 
 
@@ -53,7 +54,8 @@ dispFiles x = do
     if fileExist 
         then do
             fileContents  <- readFile x 
-            putStrLn (myRev fileContents)
+            
+            putStrLn fileContents
              
         else do
             let exc = "sort: " ++ x ++ ": No such file or directory"
@@ -79,12 +81,3 @@ iSortLine = foldr insertLine []
 
 
 
-
-
-{-
-insertLine :: [String] -> [String] -> [String]
-insertLine x [] = x 
-insertLine n (x:xs) 
-    | head n <  x  = n ++ (x:xs)
-    | otherwise = x : insertLine n xs 
--}
