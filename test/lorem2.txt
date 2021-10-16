@@ -1,0 +1,3 @@
+Haskell's cryptic form
+is natural to some folks
+and so is haiku
