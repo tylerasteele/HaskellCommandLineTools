@@ -27,7 +27,7 @@ dispFiles x = do
     if fileExist 
         then do
             fileContents  <- readFile x 
-            putStrLn (myRev fileContents)
+            putStr (myRev fileContents)
              
         else do
             let exc = "rev: " ++ x ++ ": No such file or directory"

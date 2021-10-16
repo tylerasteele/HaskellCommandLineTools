@@ -54,7 +54,7 @@ dispFilesM x = do
             fileContents  <- readFile x 
             let fileId = "==> " ++ x ++ " <=="
             putStrLn fileId
-            putStrLn (get10 fileContents)
+            putStr (get10 fileContents)
              
         else do
             let exc = "head: " ++ x ++ ": No such file or directory"
