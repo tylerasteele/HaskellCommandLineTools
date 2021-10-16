@@ -28,7 +28,7 @@ dispFilesS x = do
     if fileExist 
         then do
             fileContents  <- readFile x 
-            putStrLn (get10 fileContents)
+            putStr (get10 fileContents)
              
         else do
             let exc = "head: " ++ x ++ ": No such file or directory"
@@ -40,6 +40,15 @@ fileHandleM :: [String] -> IO()
 fileHandleM [x] = dispFilesM x
 fileHandleM (x:xs) = do
     dispFilesM x
+    
+    -- Dumb spacing: 
+    fileExist <- doesFileExist (head xs) 
+    fileExist1 <- doesFileExist x
+    if fileExist && fileExist1 then do 
+        putStr "\n"
+    else do 
+        putStr ""
+
     fileHandleM xs 
 
     
