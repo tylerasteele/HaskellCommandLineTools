@@ -9,13 +9,15 @@ main :: IO ()
 
 main = do 
     fNames <- getArgs 
+    ins <- allE fNames 
+
 
     -- If single file, just take 10, else file tracking ==> 
     if length fNames == 1 then 
         dispFilesS $ head fNames 
 
     else do
-        fileHandleM fNames 
+        fileHandleM fNames  
 
 
 -- Ways to condense dispFileS and dispFilesM -> State?
@@ -37,9 +39,9 @@ dispFilesS x = do
 
 -- Handle if multiple files D
 fileHandleM :: [String] -> IO()
-fileHandleM [x] = dispFilesM x
-fileHandleM (x:xs) = do
-    dispFilesM x
+fileHandleM [x] = dispFilesM x 
+fileHandleM (x:xs)  = do
+    dispFilesM x 
     
     -- Dumb spacing: 
     fileExist <- doesFileExist (head xs) 
@@ -55,7 +57,7 @@ fileHandleM (x:xs) = do
     
 -- Display files in desired manner 
 dispFilesM :: String -> IO()
-dispFilesM x = do
+dispFilesM x  = do
     fileExist <- doesFileExist x
 
     if fileExist 
@@ -72,3 +74,13 @@ dispFilesM x = do
 
 get10 :: String -> String
 get10 xs = unlines (take 10 (lines xs))
+
+allE :: [String] -> IO Bool 
+allE [x] = do doesFileExist x 
+allE (x:xs) = do 
+    d <- doesFileExist x 
+
+    if d then do 
+        allE xs 
+    else do 
+        return d  
