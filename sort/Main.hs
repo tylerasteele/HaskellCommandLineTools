@@ -4,17 +4,11 @@ import System.Environment
 import System.Directory
 import System.IO
 
-
-
-
 main :: IO ()
 
 main = do 
     fNames <- getArgs 
     test (allExists fNames) fNames 
-
-
-
 
 -- Determine if all files exist 
 allExists :: [String] -> [IO Bool] 
@@ -36,20 +30,6 @@ test [x] y= do
 
     if res then do 
         -- Recursed all bools, perform string processing 
-    {-
-        let h = head $ getCont y 
-        let z = last $ getCont y 
-
-        let zz = getCont y 
-
-        r <- h
-        s <- z 
-        t <- head zz 
-
-        putStr r
-        putStr s
-        putStr $ head y 
--}
         finish y 
 
     else do
@@ -63,7 +43,6 @@ test (x:xs) y = do
     else do  
         putStrLn "sort: No such file or directory"
     
-
 finish :: [String] -> IO () 
 finish xs = do 
 
@@ -85,17 +64,8 @@ finish xs = do
         let c0 = c1 ++ c2 ++ c3 ++ c4 
         putStr $ sortSmoosh c0 
 
-
-
     else do 
-        putStr "weenur"
-{-
-strStep (x:xs) = do 
-    contents <- readFile x 
-    contents : strStep xs
-
--}
-
+        putStr ":,("
 
 smoosh :: String -> String -> String 
 smoosh x y = x ++ y 
@@ -112,28 +82,6 @@ insertLine n (x:xs)
 iSortLine ::  [String] -> [String ]
 iSortLine = foldr insertLine [] 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---fileHandle :: [String] -> IO()
 fileHandle :: [String] -> IO ()
 fileHandle [] = return ()
 fileHandle [x] = dispFiles x
@@ -148,29 +96,8 @@ dispFiles x = do
     if fileExist 
         then do
             fileContents  <- readFile x 
-
             putStrLn fileContents
              
         else do
             let exc = "sort: " ++ x ++ ": No such file or directory"
             putStrLn exc
-
-
-
-
-{-
-getCE :: FilePath -> IO String 
-getCE x = do 
-    fileExists <- doesFileExist x
-
-    if fileExists then do 
-        contents <- readFile x 
-        return contents 
-
-    else do 
-        let exc = "sort: " ++ x ++ ": No such file or directory"
-        return exc 
--}
-
-
-
