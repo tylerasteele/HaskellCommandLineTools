@@ -5,14 +5,12 @@ import System.Directory
 import System.IO
 
 import qualified GHC.IO.Device as System
--- What is line 4? Why does it break
 
 main :: IO ()
 
 main = do 
     fNames <- getArgs 
     fileHandle fNames
-
 
 fileHandle :: [String] -> IO()
 fileHandle [] = return ()
