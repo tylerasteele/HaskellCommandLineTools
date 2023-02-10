@@ -4,9 +4,6 @@ import System.Environment
 import System.Directory
 import System.IO
  
-
-
-
 main :: IO ()
 
 main = do 
@@ -30,8 +27,7 @@ main = do
             -- Ensure source file exists 
             if not sourceExist then do 
                 dfErr $ head fNames 
-
-
+                
             else do 
                 targetExists <- doesFileExist $ last fNames 
                 c1 <- readFile $ head fNames 
@@ -52,28 +48,7 @@ main = do
                 -- Write to new file 
                 else do 
                     writeFile (last fNames) c1 
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                 
 -- Check if file contents are identical 
 checkIdentical :: String-> String -> Bool 
 checkIdentical [] [] = True 
@@ -83,7 +58,6 @@ checkIdentical [x] [y] = True
 checkIdentical (x:xs) (y:ys) 
     | x == y = checkIdentical xs ys 
     | otherwise  = False 
-
 
 -- Remove filename 
 getDirOnly :: String -> String 
@@ -102,7 +76,6 @@ dfErr :: String -> IO ()
 dfErr x = do
     let err = "cp: " ++ x ++ ": No such file or directory"
     putStrLn err 
-
 
 -- If > 2 args 
 usageErr :: IO () 
