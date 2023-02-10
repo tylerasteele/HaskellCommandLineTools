@@ -1,16 +1,10 @@
 -- Final Problem. Curl 
--- Problem 3. Rev 
-
 
 import System.Environment
 import System.Directory
 import System.IO
 import Network.Browser 
 import Network.HTTP 
-
-
-
-
 
 main :: IO ()
 main = do 
@@ -40,8 +34,6 @@ remExtraneous [x]
 remExtraneous (x:xs) 
     | x /= '\\' = x : remExtraneous xs 
     | otherwise = remExtraneous xs  
-
-
 
 uriHeader :: String 
 uriHeader = "http://"
