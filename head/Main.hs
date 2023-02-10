@@ -4,13 +4,11 @@ import System.Environment
 import System.Directory
 import System.IO
 
-
 main :: IO ()
 
 main = do 
     fNames <- getArgs 
     ins <- allE fNames 
-
 
     -- If single file, just take 10, else file tracking ==> 
     if length fNames == 1 then 
@@ -19,9 +17,6 @@ main = do
     else do
         fileHandleM fNames  
 
-
--- Ways to condense dispFileS and dispFilesM -> State?
- 
 -- Display files in desired manner 
 dispFilesS :: String -> IO()
 dispFilesS x = do
@@ -36,14 +31,13 @@ dispFilesS x = do
             let exc = "head: " ++ x ++ ": No such file or directory"
             putStrLn exc
 
-
 -- Handle if multiple files D
 fileHandleM :: [String] -> IO()
 fileHandleM [x] = dispFilesM x 
 fileHandleM (x:xs)  = do
     dispFilesM x 
     
-    -- Dumb spacing: 
+    -- Spacing: 
     fileExist <- doesFileExist (head xs) 
     fileExist1 <- doesFileExist x
     if fileExist && fileExist1 then do 
@@ -52,8 +46,6 @@ fileHandleM (x:xs)  = do
         putStr ""
 
     fileHandleM xs 
-
-    
     
 -- Display files in desired manner 
 dispFilesM :: String -> IO()
